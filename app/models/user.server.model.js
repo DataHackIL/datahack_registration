@@ -94,5 +94,4 @@ UserSchema.statics.findUniqueUsername = function(email, suffix, callback) {
 	);
 };
 
-
 mongoose.model('User', UserSchema);

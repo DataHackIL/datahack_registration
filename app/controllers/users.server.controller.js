@@ -349,7 +349,6 @@ check if registration is open via param schema
  */
 exports.isRegistrationOpen = function (req, res, next) {
 	Param.findOne({name:"users"},function(err, param){
-		next();
 		if (err) {
 			return next(err);
 		}else if(!param){
