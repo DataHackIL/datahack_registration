@@ -61,7 +61,7 @@ $(document).ready(function() {
                     modal({
                         type: 'success',
                         title: 'Success',
-                        text: "You registered successfully! You will now be redirected to our Team registration platform.",
+                        text: "You registered successfully! You will now be redirected to our team registration platform.",
                         animate:true,
                         callback:function(){window.location.replace("/login");}
                     });
@@ -71,7 +71,7 @@ $(document).ready(function() {
                         modal({
                             type: 'error',
                             title: 'Houston, We have a problem',
-                            text: "A user with this email already exists.\nThere is no need to register twice.\nfor help please contact huji.hackathon@gmail.com",
+                            text: "A user with this email already exists.\nThere is no need to register twice.\nfor help please contact contact@datahack-il.com",
                             animate:true
                         });
                         $('.reg-loader').css('display','none');
@@ -83,7 +83,7 @@ $(document).ready(function() {
                         modal({
                             type: 'error',
                             title: 'Houston, We have a problem',
-                            text: "We have a problem. Please try again or contact huji.hackathon@gmail.com| data=" + data + "| data.status="+ data.status,
+                            text: "We have a problem. Please try again or contact contact@datahack-il.com| data=" + data + "| data.status="+ data.status,
                             animate:true
                         });
                         $('.reg-loader').css('display','none');
