@@ -78,6 +78,8 @@ $(document).ready(function() {
                         $('#reg_but').prop('disabled',false);
                     }
                     else{
+                        console.log(data.status)
+                        console.log(data)
                         modal({
                             type: 'error',
                             title: 'Houston, We have a problem',

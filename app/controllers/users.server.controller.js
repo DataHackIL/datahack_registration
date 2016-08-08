@@ -25,7 +25,7 @@ function sendEmail(body){
 	var mailOptions = {
 		from: body.email, // sender address
 		to: '', // list of receivers
-		subject: 'Someone contact huji hackathon 2016 website!', // Subject line
+		subject: 'Someone contact DataHack 2016 website!', // Subject line
 		text: body.message,// plaintext body
 		html: '<h1> '+ body.name  +'('+ body.email +')</h1><h2> This is his message:</h2><h3>'+ body.message +'</h3>'// html body
 	};
@@ -43,10 +43,10 @@ function sendEmailRsvp(emailAddr, f_name, l_name){
 	// setup e-mail data with unicode symbols
 
 	var mailOptions = {
-		from: "huji.hackathon@gmail.com", // sender address
+		from: "contact@datahack-il.com", // sender address
 		to: emailAddr, // list of receivers
-		subject: '2016 HUJI Hackathon RSVP confirmation', // Subject line
-		text: "Hi " + f_name + " " + l_name + "\nYou have accepted the rules and RSVP\'d for the 2016 HUJI Hackathon.\n\nSee you soon!\n2016 HUJI Hackathon Team",// plaintext body
+		subject: 'DataHack 2016 RSVP confirmation', // Subject line
+		text: "Hi " + f_name + " " + l_name + "\nYou have accepted the rules and RSVP\'d for DataHack 2016.\n\nSee you soon!\nThe DataHack team",// plaintext body
 		html: ''// html body
 	};
 
@@ -353,7 +353,7 @@ exports.isRegistrationOpen = function (req, res, next) {
 		if (err) {
 			return next(err);
 		}else if(!param){
-			res.status(403).json({code: 14, status:"we have a general error, code 14. please contact hujihackathon.co.il"})
+			res.status(403).json({code: 14, status:"We have a general error, code 14. Please contact contact@datahack-il.com"})
 		}else if (!param.isOpen){
 			res.redirect('/');
 			//res.status(403).send("<h1>Participants Registration is now closed.</h1>");
@@ -369,16 +369,16 @@ exports.userAgree = function (req,res,next) {
 			//Yes, it's a valid ObjectId, proceed with `findById` call.
 			User.findByIdAndUpdate({_id: req.params.userIdToUpdate},{"accepted":true}, function (err, user) {
 				if (err) {
-					res.status(500).send("<h4>We had an internal error, please try again or contact huji.hackathon@gmail.com</h4>");
+					res.status(500).send("<h4>We had an internal error, please try again or contact contact@datahack-il.com</h4>");
 				}
 				else if (!user){
-					res.status(400).send("<h4>user token not found, please try again or contact huji.hackathon@gmail.com</h4>")
+					res.status(400).send("<h4>User token not found, please try again or contact contact@datahack-il.com</h4>")
 				} else {
 					var msgToSend ="";
 					if (user.accepted){
 						msgToSend = 'You have already RSVP\'d.';
 					}else{
-						msgToSend = "You have accepted the rules & RSVP'd for the 2016 HUJI Hackathon";
+						msgToSend = "You have accepted the rules & RSVP'd for DataHack 2016!";
 						sendEmailRsvp(user.email, user.first_name, user.last_name);
 					}
 
@@ -393,10 +393,10 @@ exports.userAgree = function (req,res,next) {
 				});
 		//invalid object token
 		}else{
-			res.status(400).send("<h4>user token not valid, please try again or contact huji.hackathon@gmail.com</h4>")
+			res.status(400).send("<h4>User token not valid, please try again or contact contact@datahack-il.com</h4>")
 		}
 	}else{
-		res.status(400).send("<h4>no user token was sent, please try again or contact huji.hackathon@gmail.com</h4>")
+		res.status(400).send("<h4>No user token was sent, please try again or contact contact@datahack-il.com</h4>")
 	}
 };
 
