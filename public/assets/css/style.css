@@ -8,7 +8,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    color: #888;
+    color: #dcdcdc;
     line-height: 30px;
     text-align: center;
 }
@@ -46,7 +46,7 @@ strong { font-weight: 500; }
 }
 
 a, a:hover, a:focus {
-	color: #19b9e7;
+	color: #ff3c62;
 	text-decoration: none;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
@@ -55,14 +55,14 @@ h1, h2 {
 	margin-top: 10px;
 	font-size: 38px;
     font-weight: 100;
-    color: #555;
+    color: #FFF;
     line-height: 50px;
 }
 
 h3 {
 	font-size: 22px;
     font-weight: 300;
-    color: #555;
+    color: #FFF;
     line-height: 30px;
 }
 
@@ -73,10 +73,10 @@ img { max-width: 100%; }
 	line-height: 32px;
 }
 
-.blue { color: #19b9e7; }
+.blue { color: #ff3c62; }
 
-::-moz-selection { background: #19b9e7; color: #fff; text-shadow: none; }
-::selection { background: #19b9e7; color: #fff; text-shadow: none; }
+::-moz-selection { background: #ff3c62; color: #fff; text-shadow: none; }
+::selection { background: #ff3c62; color: #fff; text-shadow: none; }
 
 
 .btn-link-1 {
@@ -84,7 +84,7 @@ img { max-width: 100%; }
 	height: 50px;
 	margin: 0 5px;
 	padding: 16px 20px 0 20px;
-	background: #19b9e7;
+	background: #ff3c62;
 	font-size: 16px;
     font-weight: 300;
     line-height: 16px;
@@ -140,7 +140,7 @@ ul.navbar-nav {
 	vertical-align: middle;
 }
 .navbar-inverse ul.navbar-nav li .li-social a:hover, 
-.navbar-inverse ul.navbar-nav li .li-social a:focus { border: 0; color: #19b9e7; }
+.navbar-inverse ul.navbar-nav li .li-social a:focus { border: 0; color: #ff3c62; }
 
 .navbar-brand {
 	width: 123px;
@@ -190,7 +190,8 @@ ul.navbar-nav {
 .form-top {
 	overflow: hidden;
 	padding: 0 25px 15px 25px;
-	background: #fff;
+	background: #1c1d26;
+	opacity: 0.7;
 	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
 	text-align: left;
 }
@@ -209,7 +210,7 @@ ul.navbar-nav {
 	width: 25%;
 	padding-top: 5px;
 	font-size: 66px;
-	color: #ddd;
+	color: #16bead;
 	line-height: 100px;
 	text-align: right;
 
@@ -221,7 +222,8 @@ ul.navbar-nav {
 
 .form-bottom {
 	padding: 25px 25px 30px 25px;
-	background: #eee;
+	background: #1c1d26;
+	opacity: 0.8;
 	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
 	text-align: left;
 }
@@ -231,7 +233,7 @@ ul.navbar-nav {
 }
 
 .form-bottom form .input-error {
-	border-color: #19b9e7;
+	border-color: #ff3c62;
 }
 
 /*teams*/
@@ -255,13 +257,13 @@ ul.navbar-nav {
 }
 
 i[id^="mem_rem_"]:hover{
-	color: #19b9e7;
+	color: #ff3c62;
 }
 #add_mem{
 	display: block;
 }
 #add_mem:hover{
-	color: #19b9e7;
+	color: #ff3c62;
 }
 .how-it-works:hover{
 	color: black;
@@ -315,7 +317,7 @@ footer{
 	font-size: 20px;
 }
 #information:hover{
-	color: #19b9e7;
+	color: #1aa194;
 }
 
 .main-site-head-team{
