@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
     //change tags
-    var $cs1 = $( "<span class=tag data-tag='java'>JAVA<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
+    var $cs1 = $( "<span class=tag data-tag='java'>Java<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
     var $cs2 = $( "<span class=tag data-tag='html'>HTML<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
-    var $cs3 = $( "<span class=tag data-tag='nodejs'>node js<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
+    var $cs3 = $( "<span class=tag data-tag='nodejs'>Node.js<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
     $('#tags').prepend($cs1,$cs2,$cs3);
     var $de1 = $( "<span class=tag data-tag='photoshop'>Photoshop<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
     var $de2 = $( "<span class=tag data-tag='illustrator'>Illustrator<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
@@ -20,6 +20,26 @@ $(document).ready(function() {
         }
     });
 //
+
+    // Open academic field and institution if student
+    if ($('#form-student').val()==='false'){
+        $('#wrap-lookingText').css('display','none');
+        $('#wrap-institution').css('display','none');
+    }
+
+    $('#form-student').on('change', function() {
+        if($(this).val()==='true'){
+            $('#wrap-field').css('display','block');
+            $('#form-field').prop('required',true);
+            $('#wrap-institution').css('display','block');
+            $('#form-institution').prop('required',true);
+        }else{
+            $('#wrap-field').css('display','none');
+            $('#form-field').prop('required',false);
+            $('#wrap-institution').css('display','none');
+            $('#form-institution').prop('required',false);
+        }
+    });
 
 
 
