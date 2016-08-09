@@ -21,23 +21,45 @@ $(document).ready(function() {
     });
 //
 
-    // Open academic field and institution if student
-    if ($('#form-student').val()==='false'){
-        $('#wrap-lookingText').css('display','none');
+    // Hide academic field and institution if not student and no degree
+    if ( ($('#form-student').val()==='false') && ($('#form-degree').val()==='none') ){
+        $('#wrap-field').css('display','none');
+        $('#form-field').prop('required',false);
         $('#wrap-institution').css('display','none');
+        $('#form-institution').prop('required',false);
     }
 
+    // Hide/show academic field and institution on student field change
     $('#form-student').on('change', function() {
-        if($(this).val()==='true'){
+        if ($(this).val()==='true'){
             $('#wrap-field').css('display','block');
             $('#form-field').prop('required',true);
             $('#wrap-institution').css('display','block');
             $('#form-institution').prop('required',true);
-        }else{
-            $('#wrap-field').css('display','none');
-            $('#form-field').prop('required',false);
-            $('#wrap-institution').css('display','none');
-            $('#form-institution').prop('required',false);
+        } else {
+            if ($('#form-degree').val()==='none'){
+                $('#wrap-field').css('display','none');
+                $('#form-field').prop('required',false);
+                $('#wrap-institution').css('display','none');
+                $('#form-institution').prop('required',false);
+            }
+        }
+    });
+
+    // Hide/show academic field and institution on degree field change
+    $('#form-degree').on('change', function() {
+        if ($(this).val()==='none'){
+            if ($('#form-student').val()==='false'){
+                $('#wrap-field').css('display','none');
+                $('#form-field').prop('required',false);
+                $('#wrap-institution').css('display','none');
+                $('#form-institution').prop('required',false);
+            }
+        } else {
+            $('#wrap-field').css('display','block');
+            $('#form-field').prop('required',true);
+            $('#wrap-institution').css('display','block');
+            $('#form-institution').prop('required',true);
         }
     });
 
