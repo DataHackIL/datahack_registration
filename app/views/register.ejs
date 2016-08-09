@@ -122,7 +122,7 @@
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                                <label for="form-degree">Academic Degree</label>
+                                                <label for="form-degree">Academic Degree <span id="information" data-tooltip="It's not a requirement! Just for stats!" class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
                                                 <select name="degree" id="form-degree" class="" required>
                                                     <option value="none" selected="selected">None</option>
                                                     <option value="undergraduate">Undergraduate/Bachleor</option>
@@ -133,7 +133,7 @@
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                            <label for="form-student">Are you currently a student?</label>
+                                            <label for="form-student">Are you currently a student? <span id="information" data-tooltip="It's not a requirement! Just for stats!" class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
                                             <select name="student" id="form-student" class="" required>
                                                 <option value=false selected="selected">No</option>
                                                 <option value=true>Yes</option>
@@ -142,7 +142,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div id="wrap-field" class="form-group">
-                                                <label for="form-field">Academic Field <span id="information" data-tooltip="Leave blank if not relevant." class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
+                                                <label for="form-field">Academic Field</label>
                                                 <input type="text" name="field" placeholder="Field..." class="form-first-name form-control" id="form-field" required>
                                             </div>
                                         </div>
@@ -150,13 +150,13 @@
 									<div class="row">
 										<div class="col-sm-6 selectContainer">
 											<div id="wrap-institution" class="form-group">
-												<label for="form-institution">Academic Institution <span id="information" data-tooltip="Write 'None' if not relevant." class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
+												<label for="form-institution">Academic Institution</label>
                                                 <input type="text" name="institution" placeholder="Academic Institution..." class="" id="form-institution" required>
 											</div>
 										</div>
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                            <label for="form-teamstatus">Team Status</label>
+                                            <label for="form-teamstatus">Team Status <span id="information" data-tooltip="You don't have to have a team to register or get accepted, but it's part of the fun, so check our team-finding system when you're done registering." class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
                                             <select name="teamstatus" id="form-teamstatus" class="" required>
                                                 <option value="none" selected="selected">None yet.</option>
                                                 <option value="have">I've got a team.</option>
@@ -223,7 +223,7 @@
                                     <div class="row">
                                         <div class="col-sm-2">
                                             <div class="form-group">
-                                            <label for="form-gender">Gender</label>
+                                            <label for="form-gender">Gender <span id="information" data-tooltip="No gender bias! We swear!" class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
                                             <select name="gender" id="form-gender" class="" required>
                                                 <option value="female" selected="selected">Female</option>
                                                 <option value="male">Male</option>
@@ -278,7 +278,7 @@
 									<div class="row">
 										<div class="col-sm-6">
 											<div class="form-group">
-											<label for="form-skills">Skills <span id="information" data-tooltip="What you can do, including specific prgrams, programming languages and frameworks." class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
+											<label for="form-skills">Skills <span id="information" data-tooltip="What you can do, including specific programs, programming languages and frameworks." class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
 											<div id="tags">
 												<input class="form-control" type="text" id="form-skills" placeholder="Add a tag" />
 											</div>
@@ -307,7 +307,7 @@
 										</div>
 									</div>
 
-			                        <button id="reg_but" type="submit" class="btn">Sign me up!</button> &nbsp; (<a href="https://drive.google.com/file/d/0B3IYTOSJm0hORW5KNHc4Y0ZoMUE/view?usp=sharing" target="_blank">View terms and conditions</a>)
+			                        <button id="reg_but" type="submit" class="btn">Sign me up!</button> &nbsp; (<a href="https://drive.google.com/file/d/0B3IYTOSJm0hORW5KNHc4Y0ZoMUE/view?usp=sharing" target="_blank">View Terms and Conditions</a>)
 									<i style="display:none" class="reg-loader fa fa-spinner fa-pulse fa-2x"></i>
 			                    </form>
 		                    </div>
