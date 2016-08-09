@@ -125,7 +125,7 @@ $(document).ready(function() {
                         modal({
                             type: 'error',
                             title: 'Houston, We have a problem',
-                            text: "We have a problem. Please try again or contact contact@datahack-il.com| data=" + data + "| data.status="+ data.status,
+                            text: "We have a problem. Please try again or contact contact@datahack-il.com",
                             animate:true
                         });
                         $('.reg-loader').css('display','none');
