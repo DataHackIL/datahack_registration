@@ -155,17 +155,17 @@
                                         <label for="form-team-challenge">Do you intend to tackle one of our sponsor challenges?</label>
 
                                         <select style="width: 100%" name="challenge" class="form-team-challenge" id="challenge">
-                                            <option value="idk" selected="selected">We don't know yet.</option>
-                                            <option value="final">Yes, final's challenge.</option>
-                                            <option value="final">Yes, Windward's challenge.</option>
-                                            <option value='no'>No.</option>
+                                            <option value="idk" <%if (team.challenge == "idk") {%>selected="selected" <%}%>>We don't know yet.</option>
+                                            <option value="final" <%if (team.challenge == "final") {%>selected="selected" <%}%>>Yes, final's challenge.</option>
+                                            <option value="windward" <%if (team.challenge == "windward") {%>selected="selected" <%}%>>Yes, Windward's challenge.</option>
+                                            <option value="no" <%if (team.challenge == "no") {%>selected="selected" <%}%>>No.</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div id="wrap-dataset" class="form-group">
                                         <label for="form-dataset">What dataset do you intend to use?</label>
-                                        <textarea required name="dataset" placeholder="If the dataset doesn't have a well-known name, please briefly describe it (Write 'undecided' if undecided; you can update this at any point)." class="form-lookingText form-control" id="form-lookingText" ></textarea>
+                                        <textarea required name="dataset" placeholder="If the dataset doesn't have a well-known name, please briefly describe it (Write 'undecided' if undecided; you can update this at any point)." class="form-lookingText form-control" id="form-lookingText" ><%=team.dataset%></textarea>
                                     </div>
                                 </div>
                             </div>
