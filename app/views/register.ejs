@@ -166,11 +166,10 @@
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                            <label for="form-gender">Gender</label>
-                                            <select name="gender" id="form-gender" class="" required>
-                                                <option value="female" selected="selected">Female</option>
-                                                <option value="male">Male</option>
-                                                <option value="other">Other</option>
+                                            <label for="form-hacker">Attended a hackathon before? <span id="information" data-tooltip="It's not a requirement! Just for stats!" class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
+                                            <select name="hacker" id="form-hacker" class="" required>
+                                                <option value=false selected="selected">No</option>
+                                                <option value=true>Yes</option>
                                             </select>
                                             </div>
                                         </div>
@@ -222,16 +221,17 @@
 									</div>
 
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-2">
                                             <div class="form-group">
-                                            <label for="form-hacker">Attended a hackathon before? <span id="information" data-tooltip="It's not a requirement! Just for stats!" class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
-                                            <select name="hacker" id="form-hacker" class="" required>
-                                                <option value=false selected="selected">No</option>
-                                                <option value=true>Yes</option>
+                                            <label for="form-gender">Gender</label>
+                                            <select name="gender" id="form-gender" class="" required>
+                                                <option value="female" selected="selected">Female</option>
+                                                <option value="male">Male</option>
+                                                <option value="other">Other</option>
                                             </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-4">
                                             <div class="form-group">
                                             <label for="form-class">Character class <span id="information" data-tooltip="No penalties for Multiclassing!" class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
                                             <select name="class" id="form-class" class="" required>
