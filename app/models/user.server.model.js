@@ -12,6 +12,7 @@ var UserSchema = new Schema({
 		required: 'Email address is required',
 		match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
 	},
+	cv: String,
 	phone: String,
 	age: String,
 	degree: String,
