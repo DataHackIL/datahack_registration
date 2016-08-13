@@ -22,7 +22,7 @@ var upload = multer({
     bucket: '***REMOVED***',
     key: function (req, file, cb) {
     	console.log('Trying create key...');
-      cb(null, req.body.email);
+      cb(null, req.body.email+"_"+file.originalname);
     }
   })
 });
