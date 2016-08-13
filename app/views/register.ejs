@@ -297,7 +297,7 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label for="form-cv">Resume/CV * <span id="information" data-tooltip="Please provide a link to a publicy available PDF or .doc/.docx resume file (a read-only link to a Dropbox or Google Drive file is a good idea; We won't share this link, so it won't become public knowledge). Providing your CV is mandatory, as it is used for considering your application." class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
-                                                <input type="text" name="cv" placeholder="A link to your CV file" class="" id="form-cv" required>
+                                                <input type="text" name="cv" style="text-transform: lowercase;" placeholder="A link to your CV file" class="" id="form-cv" pattern="^((?!linkedin).)*$" required>
                                             </div>
                                         </div>
 									</div>
