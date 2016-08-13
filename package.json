@@ -35,6 +35,9 @@
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.2",
     "forever":"*",
+    "multer": "1.2.0",
+    "multer-s3": "2.3.2",
+    "aws-sdk": "2.5.0",
     "nodemailer": "^2.2.1"
   }
 }

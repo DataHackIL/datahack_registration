@@ -82,23 +82,20 @@ $(document).ready(function() {
             $('#reg_but').prop('disabled',false);
         } else {
             var tags = $('.tag');
-            var JTags = {};
+            var jTags = [];
             $.each(tags, function(key, value) {
-                JTags[key] = $(value).attr('data-tag');
+                jTags.push($(value).attr('data-tag'));
             });
-            var STags = {
-                "tags": JTags
-            };
-            var formData = $(this).serializeObject();
-            console.log(formData)
-            formData.tags = JTags;
-            formData.regDate = Date();
+            var formData = new FormData(this);
+            formData.append('tags', jTags);
+            formData.append('regDate', Date());
             $.ajax({
                 type: "POST",
                 cache: false,
-                contentType: "application/json",
+                contentType: false,
+                processData: false,
                 url: $(this).attr('action'),
-                data: JSON.stringify(formData),
+                data: formData, 
                 success: function(data) {
                     modal({
                         type: 'success',
@@ -134,7 +131,6 @@ $(document).ready(function() {
                 }
             });
         }
-
     });
 
 

@@ -94,7 +94,7 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form id="form-reg" role="form" action="/register" method="post" class="registration-form">
+			                    <form id="form-reg" role="form" action="/register" method="post" class="registration-form" enctype="multipart/form-data">
 			                    	<div class="row">
 										<div class=" col-sm-6">
 											<div class="form-group">
@@ -297,11 +297,20 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label for="form-cv">Resume/CV * <span id="information" data-tooltip="Please provide a link to a publicy available PDF or .doc/.docx resume file (a read-only link to a Dropbox or Google Drive file is a good idea; We won't share this link, so it won't become public knowledge). Providing your CV is mandatory, as it is used for considering your application." class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
-                                                <input type="text" name="cv" style="text-transform: lowercase;" placeholder="A link to your CV file" class="" id="form-cv" pattern="^((?!linkedin).)*$" required>
+                                                <input type="file"
+                                                       name="cv"
+                                                       style="text-transform: lowercase;"
+                                                       placeholder="Your CV file" class=""
+                                                       accept=".pdf,.doc,.docx" 
+                                                       id="form-cv" pattern="^((?!linkedin).)*$"
+                                                       required>
+                                                <!-- <input type="file" name="cv"> -->
                                             </div>
                                         </div>
 									</div>
+                                    <div class="row">
 
+                                    </div>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <!-- <label for="form-cv">Newsletter Signup</label> -->

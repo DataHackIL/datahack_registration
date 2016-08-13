@@ -1,7 +1,7 @@
 var User = require('mongoose').model('User'),
-	Param = require('mongoose').model('Param'),
-	passport = require('passport'),
-	nodemailer = require('nodemailer');
+  Param = require('mongoose').model('Param'),
+  passport = require('passport'),
+  nodemailer = require('nodemailer');
 
 
 //Init the SMTP transport
@@ -149,6 +149,8 @@ exports.renderReset = function(req, res, next) {
 
 exports.register = function(req, res, next) {
 	if (!req.user) {
+		console.log(req.body);
+		console.log(req.files);
 		var user = new User(req.body);
 		var message = null;
 		user.provider = 'local';
@@ -398,5 +400,3 @@ exports.userAgree = function (req,res,next) {
 		res.status(400).send("<h4>No user token was sent, please try again or contact contact@datahack-il.com</h4>")
 	}
 };
-
-
