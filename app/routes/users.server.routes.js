@@ -5,7 +5,7 @@ var AWS = require('aws-sdk')
 var multer = require('multer');
 var multerS3 = require('multer-s3')
 
-AWS.config.update({ 
+AWS.config.update({
   accessKeyId: '***REMOVED***',
   secretAccessKey: '***REMOVED***',
   region: '***REMOVED***'
@@ -22,7 +22,7 @@ var upload = multer({
     bucket: '***REMOVED***',
     key: function (req, file, cb) {
     	console.log('Trying create key...');
-      cb(null, req.body.email);
+      cb(null, req.body.email+"_"+file.originalname);
     }
   })
 });

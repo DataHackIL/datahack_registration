@@ -77,8 +77,8 @@
                             <div class="description">
                             	<p>
 	                            	Please fill the following form with extra care to all the details; we need them to enhance your event experience!<br>
-                                    <b>Please provide a link to a publicy available PDF or .doc/.docx resume/CV file! Not a link to your LinkedIn profile!</b> <br>
-                                    <i>(a read-only link to a Dropbox or Google Drive file is a good idea; We won't share this link, so it won't become public knowledge)</i><br>
+                                    <!-- <b>Please provide a link to a publicy available PDF or .doc/.docx resume/CV file! Not a link to your LinkedIn profile!</b> <br> -->
+                                    <!-- <i>(a read-only link to a Dropbox or Google Drive file is a good idea; We won't share this link, so it won't become public knowledge)</i><br> -->
 
                             	</p>
                             </div>
@@ -301,10 +301,9 @@
                                                        name="cv"
                                                        style="text-transform: lowercase;"
                                                        placeholder="Your CV file" class=""
-                                                       accept=".pdf,.doc,.docx" 
-                                                       id="form-cv" pattern="^((?!linkedin).)*$"
+                                                       accept=".pdf,.doc,.docx"
+                                                       id="form-cv"
                                                        required>
-                                                <!-- <input type="file" name="cv"> -->
                                             </div>
                                         </div>
 									</div>
@@ -314,10 +313,10 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <!-- <label for="form-cv">Newsletter Signup</label> -->
-                                            <h3><input type="checkbox" name="newsletter" value=true> Sign me up for the DataHack newsletter.<span id="information" data-tooltip="Our newsletter is an easy way to get a curated list of data science and machine learning related news and events, including events by DataHack, like the DataTalks meetup series." class="form-pass-info glyphicon glyphicon-info-sign"></span></h3>
+                                            <h3><input type="checkbox" name="newsletter" value=true> Sign me up for the DataHack newsletter. <span id="information" data-tooltip="Our newsletter is an easy way to get a curated list of data science and machine learning related news and events, including events by DataHack, like the DataTalks meetup series." class="form-pass-info glyphicon glyphicon-info-sign"></span></h3>
                                         </div>
                                         <div class="col-sm-6">
-                                            <h3><b>* Links to LinkedIn profiles will not be accepted.</b></h3><br>
+                                            <!-- <h3><b>* Links to LinkedIn profiles will not be accepted.</b></h3><br> -->
                                         </div>
                                     </div>
 
