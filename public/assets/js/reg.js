@@ -9,15 +9,15 @@ $(document).ready(function() {
     var $de2 = $( "<span class=tag data-tag='illustrator'>Illustrator<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
     var $de3 = $( "<span class=tag data-tag='after_effect'>After Effect<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
     var $de4 = $( "<span class=tag data-tag='solid_works'>Solid Works<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
-    $('#form-degs').on('change', function() {
-        $('.tag').remove()
-        if($(this).val()==='cs' || $(this).val()==='eng'){
-            $('#tags').prepend($cs1,$cs2,$cs3);
-        }else if($(this).val()==='vis-comm' || $(this).val()==='ind-design'){
-            $('#tags').prepend($de1,$de2,$de3,$de4);
-        }else if ($(this).val()==='cs-design') {
-            $('#tags').prepend($cs1,$cs2,$cs3);
-        }
+    // $('#form-degs').on('change', function() {
+    //     $('.tag').remove()
+    //     if($(this).val()==='cs' || $(this).val()==='eng'){
+    //         $('#tags').prepend($cs1,$cs2,$cs3);
+    //     }else if($(this).val()==='vis-comm' || $(this).val()==='ind-design'){
+    //         $('#tags').prepend($de1,$de2,$de3,$de4);
+    //     }else if ($(this).val()==='cs-design') {
+    //         $('#tags').prepend($cs1,$cs2,$cs3);
+    //     }
     });
 //
 
@@ -95,7 +95,7 @@ $(document).ready(function() {
                 contentType: false,
                 processData: false,
                 url: $(this).attr('action'),
-                data: formData, 
+                data: formData,
                 success: function(data) {
                     modal({
                         type: 'success',
