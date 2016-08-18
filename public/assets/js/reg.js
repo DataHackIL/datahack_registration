@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
     //change tags
-    var $cs1 = $( "<span class=tag data-tag='java'>Java<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
-    var $cs2 = $( "<span class=tag data-tag='html'>HTML<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
-    var $cs3 = $( "<span class=tag data-tag='nodejs'>Node.js<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
-    $('#tags').prepend($cs1,$cs2,$cs3);
-    var $de1 = $( "<span class=tag data-tag='photoshop'>Photoshop<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
-    var $de2 = $( "<span class=tag data-tag='illustrator'>Illustrator<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
-    var $de3 = $( "<span class=tag data-tag='after_effect'>After Effect<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
-    var $de4 = $( "<span class=tag data-tag='solid_works'>Solid Works<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
+    // var $cs1 = $( "<span class=tag data-tag='java'>Java<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
+    // var $cs2 = $( "<span class=tag data-tag='html'>HTML<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
+    // var $cs3 = $( "<span class=tag data-tag='nodejs'>Node.js<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
+    // $('#tags').prepend($cs1,$cs2,$cs3);
+    // var $de1 = $( "<span class=tag data-tag='photoshop'>Photoshop<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
+    // var $de2 = $( "<span class=tag data-tag='illustrator'>Illustrator<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
+    // var $de3 = $( "<span class=tag data-tag='after_effect'>After Effect<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
+    // var $de4 = $( "<span class=tag data-tag='solid_works'>Solid Works<span class='form-rem-tag glyphicon glyphicon-remove'></span></span>" )
     // $('#form-degs').on('change', function() {
     //     $('.tag').remove()
     //     if($(this).val()==='cs' || $(this).val()==='eng'){
