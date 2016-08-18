@@ -18,7 +18,7 @@ $(document).ready(function() {
     //     }else if ($(this).val()==='cs-design') {
     //         $('#tags').prepend($cs1,$cs2,$cs3);
     //     }
-    });
+    // });
 //
 
     // Hide academic field and institution if not student and no degree
