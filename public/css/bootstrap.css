@@ -6761,7 +6761,10 @@ button.close {
 
 /* Defined by Shay! */
 .checkboxdiv {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  min-height: 10em;
+  display: table-cell;
 }
 
