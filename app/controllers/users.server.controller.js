@@ -135,7 +135,8 @@ exports.renderPrintUsers = function(req, res, next) {
 
 exports.renderReset = function(req, res, next) {
 	// if (req.user && req.user.email === "oded.valtzer@gmail.com" ) {
-	if (req.user && (req.user.email === "idoivri@gmail.com" || req.user.email === "shaypal5@gmail.com") {
+	if (req.user && (req.user.email === "idoivri@gmail.com" || req.user.email === "shaypal5@gmail.com")) {
+		
 		res.render('reset', {
 			title: 'reset password',
 			user: {"email": req.user.email, "isAdmin": true},
@@ -143,6 +144,7 @@ exports.renderReset = function(req, res, next) {
 		});
 	}
 	else {
+		console.log("Failing user check!");
 		res.redirect("/login");
 	}
 };
