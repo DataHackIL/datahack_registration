@@ -177,8 +177,8 @@ $( document ).ready(function() {
                 else{
                     modal({
                         type: 'error',
-                        title: 'Houston, We have a problem',
-                        text: "We have a problem. Please try again or contact huji@hujihackathon.co.il",
+                        title: 'Houston, we have a problem.',
+                        text: "We have a problem. Please try again or contact us at contact@datahack-il.com",
                         animate:true
                     });
                     $('#submit_update').attr('disabled',false);

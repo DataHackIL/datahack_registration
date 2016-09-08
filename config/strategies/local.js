@@ -10,12 +10,12 @@ module.exports = function() {
 				if (err) {
 					return done(err);
 				}
-				
+
 				if (!user) {
 					return done(null, false, {message: 'Unknown user'});
 				}
 				if (!user.authenticate(password)) {
-					return done(null, false, {message: 'Invalid password, please try again or contact huji.hackathon@gmail.com'});
+					return done(null, false, {message: 'Invalid password. Please try again or contact us at contact@datahack-il.com'});
 				}
 				return done(null, user);
 			}

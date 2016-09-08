@@ -439,7 +439,7 @@ exports.isTeamsOpen = function (req, res, next) {
 					if (err) {
 						return next(err);
 					}else if(!param){
-						res.status(403).json({code: 12, status:"we have a general error, code 12. please contact hujihackathon.co.il"})
+						res.status(403).json({code: 12, status:"General error with code 12 encountered. Please mail us at contact@datahack-il.com"})
 					}else if (!param.isOpen){
 						res.status(403).send("<h1>Team Platform is currently closed</h1>");
 					}else{
@@ -453,7 +453,7 @@ exports.isTeamsOpen = function (req, res, next) {
 			if (err) {
 				return next(err);
 			}else if(!param){
-				res.status(403).json({code: 12, status:"we have a general error, code 12. please contact hujihackathon.co.il"})
+				res.status(403).json({code: 12, status:"General error with code 12 encountered. Please mail us at contact@datahack-il.com"})
 			}else if (!param.isOpen){
 				res.redirect('/');
 			}else{

@@ -36,7 +36,7 @@ module.exports = function() {
 
 	app.use(function(err, req, res, next) {
 		console.error(err.stack);
-		res.status(500).send('This is a 500! Are you sure that you really wanted this? if yes - contact us at hujihackathon.co.il. if no, please start again :)');
+		res.status(500).send('This is a 500! Are you sure that you really wanted this? If yes - contact us at contact@datahack-il.com. If not, please start again.)');
 	});
 	return app;
 };
