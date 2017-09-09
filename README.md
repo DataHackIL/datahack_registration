@@ -1,2 +1,4 @@
-# HujiHackathon2016
-User &amp; Teams registration website, node, mongo, passport
+# DataHack's Registration system.
+
+A registration system for hackathons, supporting user and team registration.
+Technologies: NodeJS, MongoDB, Passport.
