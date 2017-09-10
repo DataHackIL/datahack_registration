@@ -25,7 +25,7 @@ function sendEmail(body){
 	var mailOptions = {
 		from: body.email, // sender address
 		to: '', // list of receivers
-		subject: 'Someone contact DataHack 2016 website!', // Subject line
+		subject: 'Someone contact DataHack 2017 website!', // Subject line
 		text: body.message,// plaintext body
 		html: '<h1> '+ body.name  +'('+ body.email +')</h1><h2> This is his message:</h2><h3>'+ body.message +'</h3>'// html body
 	};
@@ -45,8 +45,8 @@ function sendEmailRsvp(emailAddr, f_name, l_name){
 	var mailOptions = {
 		from: "contact@datahack-il.com", // sender address
 		to: emailAddr, // list of receivers
-		subject: 'DataHack 2016 RSVP confirmation', // Subject line
-		text: "Hi " + f_name + " " + l_name + "\nYou have accepted the rules and RSVP\'d for DataHack 2016.\n\nSee you soon!\nThe DataHack team",// plaintext body
+		subject: 'DataHack 2017 RSVP confirmation', // Subject line
+		text: "Hi " + f_name + " " + l_name + "\nYou have accepted the rules and RSVP\'d for DataHack 2017.\n\nSee you soon!\nThe DataHack team",// plaintext body
 		html: ''// html body
 	};
 
@@ -110,7 +110,7 @@ exports.renderRegister = function(req, res, next) {
 	}
 	else {
 		return res.redirect('/team-up');
-	}
+	}5
 };
 
 exports.renderPrintUsers = function(req, res, next) {
@@ -136,7 +136,7 @@ exports.renderPrintUsers = function(req, res, next) {
 exports.renderReset = function(req, res, next) {
 	// if (req.user && req.user.email === "oded.valtzer@gmail.com" ) {
 	if (req.user && (req.user.email === "idoivri@gmail.com" || req.user.email === "shaypal5@gmail.com")) {
-		
+
 		res.render('reset', {
 			title: 'reset password',
 			user: {"email": req.user.email, "isAdmin": true},
@@ -381,7 +381,7 @@ exports.userAgree = function (req,res,next) {
 					if (user.accepted){
 						msgToSend = 'You have already RSVP\'d.';
 					}else{
-						msgToSend = "You have accepted the rules & RSVP'd for DataHack 2016!";
+						msgToSend = "You have accepted the rules & RSVP'd for DataHack 2017!";
 						sendEmailRsvp(user.email, user.first_name, user.last_name);
 					}
 
