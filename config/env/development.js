@@ -3,15 +3,15 @@ var host = process.env.IP || '127.0.0.1';
 module.exports = {
 	port: port,
 	host: host,
-	db: '***REMOVED***',
+	db: 'mongodb://username:password@host:port/database',
 	facebook: {
-		clientID: '***REMOVED***',
-		clientSecret: '***REMOVED***',
+		clientID: 'facebookClientID',
+		clientSecret: 'facebookClientSecret',
 		callbackURL: 'http://localhost:'+ port +'/oauth/facebook/callback'
 	},
 	twitter: {
-		clientID: '***REMOVED***',
-		clientSecret: '***REMOVED***',
+		clientID: 'twitterClientID',
+		clientSecret: 'twitterClientSecret',
 		callbackURL: 'http://localhost:'+ port +'/oauth/twitter/callback'
 	}
 };
