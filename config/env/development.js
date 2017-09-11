@@ -3,7 +3,7 @@ var host = process.env.IP || '127.0.0.1';
 module.exports = {
 	port: port,
 	host: host,
-	db: 'mongodb://username:password@host:port/database',
+	db: process.env.MONGO_DB_URI,
 	facebook: {
 		clientID: 'facebookClientID',
 		clientSecret: 'facebookClientSecret',

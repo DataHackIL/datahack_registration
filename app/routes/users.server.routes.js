@@ -4,18 +4,18 @@ var AWS = require('aws-sdk')
 var multer = require('multer');
 var multerS3 = require('multer-s3')
 AWS.config.update({
-  accessKeyId: 'AWSaccessKeyId',
-  secretAccessKey: 'AWSsecretAccessKey',
-  region: 'aws-region'
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.AWS_REGION
 });
 var s3 = new AWS.S3({
-	region: 'aws-region',
+	region: process.env.AWS_REGION,
   signatureVersion: 'v4'
 });
 var upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: 'aws-bucket-name',
+    bucket: process.env.AWS_BUCKET_NAME,
     key: function (req, file, cb) {
     	console.log('Trying create key...');
       cb(null, req.body.email+"_"+file.originalname);
