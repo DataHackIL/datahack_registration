@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
     overlay: {
       init: true,
       background: "#18b7a4",
-      opacity: 0.4
+      opacity: 0.8
     }
   });
 
