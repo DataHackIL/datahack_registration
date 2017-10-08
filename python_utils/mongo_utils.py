@@ -112,4 +112,4 @@ def send_confirmation_emails(limit=None):
         if len(batch) == ZOHO_MAX_RECIPIENTS:
             _send_confirmation_email(batch)
             batch = []
-    print("\n===========\n{} confirmation email were sent.".format(total))
+    print("\n===========\n{} confirmation emails were sent.".format(total))
