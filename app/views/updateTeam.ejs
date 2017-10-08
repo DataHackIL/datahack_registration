@@ -172,6 +172,15 @@
                                 </div>
                             </div>
 
+                            <%
+                            toggle_dh_cup = function(checked) {
+                                var elm = document.getElementById('form-datahackCup');
+                                if (checked != elm.checked) {
+                                  elm.click();
+                                }
+                              }
+                            %>
+
                             <div class="row">
                                 <div class="col-sm-12 checkboxdiv">
                                     <div id="wrap-datahackCup" class="form-group">
@@ -195,6 +204,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <% toggle_dh_cup(team.datahackCup) %>
 
                             <div class="row">
                                 <div class="col-sm-12">
@@ -244,7 +254,7 @@
 <script src="assets/js/jquery.qtip.js"></script>
 <script type="text/javascript" src="assets/js/jquery.modal.js"></script>
 <script src="assets/js/teamManagement.js"></script>
-<script>
+<!-- <script>
 function toggle_dh_cup(checked) {
   var elm = document.getElementById('form-datahackCup');
   if (checked != elm.checked) {
@@ -258,7 +268,7 @@ $(document).load(function () {
 	window.console&&console.log('Calling toggle_dh_cup()...');
 	toggle_dh_cup(team.datahackCup);
 });
-</script>
+</script> -->
 
 <!--[if lt IE 10]>
 <script src="assets/js/placeholder.js"></script>
