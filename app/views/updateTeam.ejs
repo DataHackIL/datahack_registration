@@ -175,11 +175,7 @@
                             <div class="row">
                                 <div class="col-sm-12 checkboxdiv">
                                     <div id="wrap-datahackCup" class="form-group">
-                                        <h3><input type="checkbox" name="datahackCup" id="form-datahackCup" class="form-team-datahackCup"
-                                            <%if (team.datahackCup) { %>
-                                            checked="checked"
-                                            <% } %>
-                                            />
+                                        <h3><input type="checkbox" name="datahackCup" id="form-datahackCup" class="form-team-datahackCup">
                                             We want to compete in the DataHack Cup!
                                             <span id="information" data-tooltip="The DataHack Cup is a track for teams made up entirely of employees of a single company. Each company can send a single team, and these teams will duke it out in a separate track for glory, prizes and the DataHack Cup! (teams in this track will not compete in the main competition)"
                                             class="form-pass-info glyphicon glyphicon-info-sign">
@@ -243,6 +239,12 @@
 <script type="text/javascript" src="assets/js/jquery.modal.js"></script>
 <script src="assets/js/teamManagement.js"></script>
 
+<%if (team.datahackCup) { %>
+<script>
+var elm = document.getElementById('form-datahackCup');
+elm.click();
+</script>
+<% } %>
 
 <!--[if lt IE 10]>
 <script src="assets/js/placeholder.js"></script>
