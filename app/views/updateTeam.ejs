@@ -172,25 +172,16 @@
                                 </div>
                             </div>
 
-                            <!-- <%
-                            toggle_dh_cup = function(checked) {
-                                var elm = document.getElementById('form-datahackCup');
-                                if (checked != elm.checked) {
-                                  elm.click();
-                                }
-                              }
-                            %> -->
-
                             <div class="row">
                                 <div class="col-sm-12 checkboxdiv">
                                     <div id="wrap-datahackCup" class="form-group">
-                                        <h3><input type="checkbox" name="datahackCup" id="form-datahackCup" class="form-team-datahackCup">
-                                            <!-- <%if (team.datahackCup) { %>
+                                        <h3><input type="checkbox" name="datahackCup" id="form-datahackCup" class="form-team-datahackCup"
+                                            <%if (team.datahackCup) { %>
 											checked
                                             <% }else{ %>
                                             unchecked
                                             <% } %>
-                                            /> -->
+                                            />
                                             We want to compete in the DataHack Cup!
                                             <span id="information" data-tooltip="The DataHack Cup is a track for teams made up entirely of employees of a single company. Each company can send a single team, and these teams will duke it out in a separate track for glory, prizes and the DataHack Cup! (teams in this track will not compete in the main competition)"
                                             class="form-pass-info glyphicon glyphicon-info-sign">
@@ -204,7 +195,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <% toggle_dh_cup(team.datahackCup) %> -->
 
                             <div class="row">
                                 <div class="col-sm-12">
@@ -254,21 +244,7 @@
 <script src="assets/js/jquery.qtip.js"></script>
 <script type="text/javascript" src="assets/js/jquery.modal.js"></script>
 <script src="assets/js/teamManagement.js"></script>
-<!-- <script>
-function toggle_dh_cup(checked) {
-  var elm = document.getElementById('form-datahackCup');
-  if (checked != elm.checked) {
-    elm.click();
-  }
-}
-// toggle_dh_cup(team.datahackCup);
-$(document).load(function () {
-    window.console&&console.log('Document is loaded.');
-    window.console&&console.log(team.datahackCup);
-	window.console&&console.log('Calling toggle_dh_cup()...');
-	toggle_dh_cup(team.datahackCup);
-});
-</script> -->
+
 
 <!--[if lt IE 10]>
 <script src="assets/js/placeholder.js"></script>
