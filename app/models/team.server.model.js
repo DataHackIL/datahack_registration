@@ -18,6 +18,7 @@ var TeamSchema = new Schema({
 	dataset: String,
 	lookingText: {type :String, default: ""},
 	isClosed: {type :Boolean, default: false},
+	datahackCup: {type :Boolean, default: false},
 });
 
 mongoose.model('Team', TeamSchema);
