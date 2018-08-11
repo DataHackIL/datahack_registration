@@ -53,6 +53,9 @@ exports.renderMingle = function(req, res) {
 
 };
 
+exports.renderCodeOfConduct = function (req, res) {
+    res.render('codeOfConduct')
+};
 /*
 This function checks in parameter schema if the timer is on
  */
