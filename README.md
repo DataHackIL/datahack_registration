@@ -12,7 +12,16 @@ Technologies: NodeJS, MongoDB, Passport.
 
 ## Bootstraping
 In order to bootstrap, you should first:
-* insert mongodb connection string in config/env/development.js
-* npm install (via terminal, should cd to main folder before)
-* node server.js (via terminal, should cd to main folder before)
-* chrome -> localhost
+* Clone this repository
+* Run `cd datahack_registration`
+* Run `npm install` (via terminal)
+* Create a file named `.env`
+* Edit the file as such:
+```bash
+MONGO_DB_URI = <mongo connection string>
+AWS_BUCKET_NAME = <aws bucket name>
+# Ask for the keys from other staff members
+```
+
+* run `node server.js`
+* Your local version of the website will be at `http://127.0.0.1:8080`
