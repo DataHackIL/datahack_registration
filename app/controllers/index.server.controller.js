@@ -56,6 +56,10 @@ exports.renderMingle = function(req, res) {
 exports.renderCodeOfConduct = function (req, res) {
     res.render('codeOfConduct')
 };
+
+exports.redirectToWhatsapp = function (req, res) {
+    res.redirect('https://chat.whatsapp.com/4wANoVKF4VdCUmNnYvBpO9')
+};
 /*
 This function checks in parameter schema if the timer is on
  */
