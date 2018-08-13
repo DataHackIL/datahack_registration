@@ -78,7 +78,10 @@ img { max-width: 100%; }
 ::-moz-selection { background: #ff3c62; color: #fff; text-shadow: none; }
 ::selection { background: #ff3c62; color: #fff; text-shadow: none; }
 
-
+.btn-1d:active,
+.btn-1d:hover {
+	color: #8341e8;
+}
 .btn-link-1 {
 	display: inline-block;
 	height: 50px;
@@ -109,6 +112,9 @@ img { max-width: 100%; }
 .btn-link-2:hover, .btn-link-2:focus,
 .btn-link-2:active, .btn-link-2:active:focus { outline: 0; opacity: 0.6; background: rgba(0, 0, 0, 0.3); color: #fff; }
 
+#reg_but{
+    background: #ff6b6d;
+}
 .coc {
     /*width: 50%;*/
 }
@@ -217,7 +223,7 @@ ul.navbar-nav {
 	width: 25%;
 	padding-top: 5px;
 	font-size: 66px;
-	color: #16bead;
+	color: #8341e8;
 	line-height: 100px;
 	text-align: right;
 
@@ -324,7 +330,7 @@ footer{
 	font-size: 20px;
 }
 #information:hover{
-	color: #1aa194;
+	color: #8341e8;
 }
 
 .main-site-head-team{
