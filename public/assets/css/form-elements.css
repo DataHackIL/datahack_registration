@@ -52,7 +52,7 @@ button.btn {
     margin: 0;
     padding: 0 20px;
     vertical-align: middle;
-    background: #ff3c62;
+    background: #ff6b6d;
     border: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -69,9 +69,9 @@ button.btn:hover { opacity: 0.6; color: #fff; }
 
 button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
 
-button.btn:focus { outline: 0; opacity: 0.6; background: #ff3c62; color: #fff; }
+button.btn:focus { outline: 0; opacity: 0.6; background: #ff6b6d; color: #fff; }
 
-button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #ff3c62; color: #fff; }
+button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #ff6b6d; color: #fff; }
 
 #tags{
 
@@ -86,7 +86,7 @@ button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; bac
     display:block;
     float:left;
     color:#fff;
-    background:#16bead;
+    background:#8341e8;
     padding:5px;
     padding-right:25px;
     border-radius:  4px;
