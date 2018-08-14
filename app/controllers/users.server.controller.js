@@ -25,7 +25,7 @@ function sendEmail(body){
 	var mailOptions = {
 		from: body.email, // sender address
 		to: '', // list of receivers
-		subject: 'Someone contact DataHack 2017 website!', // Subject line
+		subject: 'Someone contact DataHack 2018 website!', // Subject line
 		text: body.message,// plaintext body
 		html: '<h1> '+ body.name  +'('+ body.email +')</h1><h2> This is his message:</h2><h3>'+ body.message +'</h3>'// html body
 	};
@@ -37,6 +37,23 @@ function sendEmail(body){
 		}
 		console.log('Message sent: ' + info.response);
 	});
+}
+
+function sendEmailConduct(body) {
+    var mailOptions = {
+        from: "contact@datahack-il.com", // sender address
+        to: 'deanla@gmail.com', // list of receivers
+        subject: 'CODE OF CONDUCT VIOLATION', // Subject line
+        text: body.message,// plaintext body
+        html: '<h1> '+ body.name  +'('+ body.email +')</h1><h2> This is the message:</h2><h3>'+ body.message +'</h3>'// html body
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            return console.log(error);
+        }
+        console.log('Message sent: ' + info.response);
+    });
 }
 
 function sendEmailRsvp(emailAddr, f_name, l_name){
@@ -64,7 +81,13 @@ function sendEmailRsvp(emailAddr, f_name, l_name){
 exports.sendMail = function (req, res, next){
 	sendEmail(req.body)
 	res.send("ok");
-}
+};
+
+exports.sendConduct = function (req, res, next) {
+	sendEmailConduct(req.body);
+	alert(req.body);
+	res.send("Sent")
+};
 
 var getErrorMessage = function(err) {
 	var message = '';
@@ -381,7 +404,7 @@ exports.userAgree = function (req,res,next) {
 					if (user.accepted){
 						msgToSend = 'You have already RSVP\'d.';
 					}else{
-						msgToSend = "You have accepted the rules & RSVP'd for DataHack 2017!";
+						msgToSend = "You have accepted the rules & RSVP'd for DataHack 2018!";
 						sendEmailRsvp(user.email, user.first_name, user.last_name);
 					}
 
