@@ -214,10 +214,11 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="form-track">Track <span id="information"
-                                                                            data-tooltip="The Workshop Track allows participating in
-                                                DataHack 2018 without entering the competition itself, and with the guidance of
-                                                mentors from both academia and industry. The track will also offer introduction lectures
-                                                and hands-on workshop on the first night of the hackathon!"
+                                                                            data-tooltip="<ul>
+                                                                            <li>DataHack - </li>
+                                                                            <li>DataCup track - teams from elite companies will compete each other in a high level competition. All members should be from the same company.</li>
+                                                                            <li>Workshop Track - </li>
+                                                                            </ul>"
                                                                             class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
                                         <select name="track" id="form-track" class="form-control" required>
                                             <option value="datahack" selected="selected">DataHack</option>
@@ -370,25 +371,77 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="job-list">Character class <span id="information"
+                                                                                    data-tooltip="No penalties for Multiclassing!"
+                                                                                    class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
+                                        <ul class="list-group" id="job-list">
+                                            <li class="list-group-item col-sm-3 li-grey">
+                                                <input type="checkbox" value="job_data_scientist"> Data Scientist
+                                            </li>
+                                            <li class="list-group-item col-sm-3 li-grey">
+                                                <input type="checkbox" value="job_dev"> Developer
+                                            </li>
+                                            <li class="list-group-item col-sm-3 li-grey">
+                                                <input type="checkbox" value="job_designer"> Designer
+                                            </li>
+                                            <li class="list-group-item col-sm-3 li-grey">
+                                                <input type="checkbox" value="job_product"> Product
+                                            </li>
+                                            <li class="list-group-item col-sm-3 li-grey">
+                                                <input type="checkbox" value="job_researcher"> Researcher
+                                            </li>
+                                            <li class="list-group-item col-sm-3 li-grey">
+                                                <input type="checkbox" value="job_data_analyst"> Data Analyst
+                                            </li>
+                                            <li class="list-group-item col-sm-3 li-grey">
+                                                <input type="checkbox" value="job_devops"> DevOps
+                                            </li>
+                                            <li class="list-group-item col-sm-3 li-grey">
+                                                <input type="checkbox" value="job_other"> Other
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--<div class="row">-->
+                            <!--<div class="col-sm-12">-->
+                            <!--<div class="form-group">-->
+                            <!--<label for="form-class">Character class <span id="information"-->
+                            <!--data-tooltip="No penalties for Multiclassing!"-->
+                            <!--class="form-pass-info glyphicon glyphicon-info-sign"></span></label>-->
+                            <!--<select name="class" id="form-class" class="form-control" required>-->
+                            <!--<option value="data_scientist" selected="selected">Data Scientist</option>-->
+                            <!--<option value="dev">Developer</option>-->
+                            <!--<option value="designer">Designer</option>-->
+                            <!--<option value="product">Product Person</option>-->
+                            <!--<option value="researcher">Researcher</option>-->
+                            <!--<option value="data_analyst">Data Analyst</option>-->
+                            <!--<option value="other">Other</option>-->
+                            <!--<option value="dev_ds">Dev/Data Scientist</option>-->
+                            <!--<option value="dev_design">Dev/Designer</option>-->
+                            <!--<option value="dev_product">Dev/Product</option>-->
+                            <!--<option value="dev_ds_design">Dev/Data Scientist/Designer</option>-->
+                            <!--<option value="dev_product_design">Dev/Product/Designer</option>-->
+                            <!--</select>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <div class="row">
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="form-class">Character class <span id="information"
-                                                                                      data-tooltip="No penalties for Multiclassing!"
-                                                                                      class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
-                                        <select name="class" id="form-class" class="form-control" required>
-                                            <option value="data_scientist" selected="selected">Data Scientist</option>
-                                            <option value="dev">Developer</option>
-                                            <option value="designer">Designer</option>
-                                            <option value="product">Product Person</option>
-                                            <option value="researcher">Researcher</option>
-                                            <option value="data_analyst">Data Analyst</option>
-                                            <option value="other">Other</option>
-                                            <option value="dev_ds">Dev/Data Scientist</option>
-                                            <option value="dev_design">Dev/Designer</option>
-                                            <option value="dev_product">Dev/Product</option>
-                                            <option value="dev_ds_design">Dev/Data Scientist/Designer</option>
-                                            <option value="dev_product_design">Dev/Product/Designer</option>
+                                        <label for="form-job-status">Job Status <span id="information"
+                                                                               data-tooltip="This will make it easier for our sponsors to approach you with relevant opportunities"
+                                                                               class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
+                                        <select name="job_status" id="form-job-status" class="form-control" required>
+                                            <option value=active selected="selected">I'm looking for a job</option>
+                                            <option value=interested>I have a job, but am always happy to hear about new
+                                                opportunities
+                                            </option>
+                                            <option value=inactive>I'm happily employed at my current company</option>
                                         </select>
                                     </div>
                                 </div>
@@ -432,9 +485,10 @@
                             <hr>
 
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label for="form-cv">Resume/CV * <span id="information"
+                                        <label for="form-cv">Resume/CV * - Providing your CV is mandatory, as it is used for considering your application.
+                                            <br>Please provide a PDF or .doc/.docx file. <span id="information"
                                                                                data-tooltip="Please provide a PDF or .doc/.docx resume file. Providing your CV is mandatory, as it is used for considering your application."
                                                                                class="form-pass-info glyphicon glyphicon-info-sign"></span></label>
                                         <input type="file"
@@ -487,8 +541,8 @@
                                 <div class="col-sm-12">
                                     <button id="reg_but" type="submit" class="btn col-sm-12">Sign me up!</button> &nbsp;
                                     <!--(<a-->
-                                            <!--href="https://drive.google.com/file/d/0B3IYTOSJm0hOdWlRUGpFb0N2bnM/view?usp=sharing"-->
-                                            <!--target="_blank">View Terms and Conditions</a>)-->
+                                    <!--href="https://drive.google.com/file/d/0B3IYTOSJm0hOdWlRUGpFb0N2bnM/view?usp=sharing"-->
+                                    <!--target="_blank">View Terms and Conditions</a>)-->
                                     <i style="display:none" class="reg-loader fa fa-spinner fa-pulse fa-2x"></i></div>
                             </div>
 

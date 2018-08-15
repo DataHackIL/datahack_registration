@@ -20,6 +20,7 @@ var UserSchema = new Schema({
 	student: {type :Boolean, default: false},
 	field: String,
 	institution: String,
+	job_status: String,
 	teamstatus: String,
 	gender: String,
 	shirttype: String,
@@ -30,7 +31,6 @@ var UserSchema = new Schema({
 	class: String,
 	transport: String,
 	bus: {type :Boolean, default: false},
-	// workshop: {type :Boolean, default: false},
 	track: String,
 	toc: {type :Boolean, default: false},
 	conduct: {type :Boolean, default: false},
@@ -44,7 +44,15 @@ var UserSchema = new Schema({
 	password: String,
 	provider: String,
 	providerId: String,
-	providerData: {}
+	providerData: {},
+    job_data_scientist:{type: Boolean, default:false},
+    job_dev:{type: Boolean, default:false},
+    job_designer:{type: Boolean, default:false},
+    job_product:{type: Boolean, default:false},
+    job_researcher:{type: Boolean, default:false},
+    job_data_analyst:{type: Boolean, default:false},
+    job_devops:{type: Boolean, default:false},
+    job_other:{type: Boolean, default:false}
 
 });
 
