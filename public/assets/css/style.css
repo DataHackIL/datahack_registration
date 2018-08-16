@@ -98,8 +98,14 @@ img {
 .btn-1d:active,
 .btn-1d:hover {
     color: #8341e8;
+    /*width:100%;*/
 }
+/*Dedicated to Dima*/
+.btn-1d:hover:after {
+    width: 101%;
+    opacity: 1;
 
+}
 .btn-link-1 {
     display: inline-block;
     height: 50px;

@@ -10,8 +10,8 @@ var smtpConfig = {
 	port: 465,
 	secure: true, // use SSL
 	auth: {
-		user: '',
-		pass: ''
+		user: 'datahackil2018@gmail.com',
+		pass: process.env.EMAIL_PASS
 	},
 	tls: {
 		rejectUnauthorized: false
@@ -84,6 +84,7 @@ exports.sendMail = function (req, res, next){
 };
 
 exports.sendConduct = function (req, res, next) {
+	console.log('CONDUCT');
 	sendEmailConduct(req.body);
 	alert(req.body);
 	res.send("Sent")
