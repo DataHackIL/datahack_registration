@@ -64,6 +64,16 @@ $(document).ready(function() {
     });
 
 
+    $(function(){
+        var requiredCheckboxes = $('#job-list :checkbox[required]');
+        requiredCheckboxes.change(function(){
+            if(requiredCheckboxes.is(':checked')) {
+                requiredCheckboxes.removeAttr('required');
+            } else {
+                requiredCheckboxes.attr('required', 'required');
+            }
+        });
+    });
 
     // On submit ajax to server
     $('form').on('submit', function(e) {
