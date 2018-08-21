@@ -159,7 +159,8 @@ exports.renderPrintUsers = function(req, res, next) {
 
 exports.renderReset = function(req, res, next) {
 	// if (req.user && req.user.email === "oded.valtzer@gmail.com" ) {
-	if (req.user && (req.user.email === "idoivri@gmail.com" || req.user.email === "shaypal5@gmail.com")) {
+	// if (req.user && (req.user.email === "idoivri@gmail.com" || req.user.email === "shaypal5@gmail.com")) {
+	if (req.user && (req.user.isAdmin === true)) {
 
 		res.render('reset', {
 			title: 'reset password',
