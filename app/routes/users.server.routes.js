@@ -35,6 +35,7 @@ module.exports = function(app) {
 		.get(users.isRegistrationOpen, users.renderRegister)
 		.post(users.isRegistrationOpen, upload.single('cv'), users.register);
 	app.route('/printUsers').get(users.permissionCheck,users.renderPrintUsers);
+	app.route('/admin').get(users.permissionCheck,users.renderPrintUsers);
 	app.route('/login')
 		.get(users.renderLogin)
 		.post(passport.authenticate('local', {
