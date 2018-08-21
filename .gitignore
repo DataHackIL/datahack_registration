@@ -56,7 +56,7 @@ typings/
 
 # dotenv environment variables file
 .env
-
+start.sh
 # vim swap files
 *.swp
 
