@@ -1,5 +1,6 @@
 var Team = require('mongoose').model('Team');
 var Param = require('mongoose').model('Param');
+var debug = require('debug')('registration:controllers:index')
 
 /**
  * This function renders the main page of the platform -
