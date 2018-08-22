@@ -6,11 +6,12 @@ var User = require('mongoose').model('User'),
 
 //Init the SMTP transport
 var smtpConfig = {
-    host: 'smtp.gmail.com',
-    port: 465,
+    host: 'smtp.zoho.com',
+    port: 587,
     secure: true, // use SSL
     auth: {
-        user: 'datahackil2018@gmail.com',
+        // user: 'datahackil2018@gmail.com',
+        user: 'datahack2015@gmail.com',
         pass: process.env.EMAIL_PASS
     },
     tls: {
@@ -135,7 +136,6 @@ exports.renderRegister = function (req, res, next) {
     else {
         return res.redirect('/team-up');
     }
-    5
 };
 
 exports.renderPrintUsers = function (req, res, next) {
@@ -160,9 +160,10 @@ exports.renderPrintUsers = function (req, res, next) {
 
 exports.renderReset = function(req, res, next) {
 	// if (req.user && req.user.email === "oded.valtzer@gmail.com" ) {
-	// if (req.user && (req.user.email === "idoivri@gmail.com" || req.user.email === "shaypal5@gmail.com")) {
-	// if (req.user && (req.user.isAdmin === true)) {
-	if (req.user && ( (req.user.isAdmin === true) || (req.user.email === "shaypal5@gmail.com") || (req.user.email == "deanla@gmail.com") ) ) {
+	// if (req.user && (req.user.email === "idoivri@gmail.com" || req.user.email === "shaypal5@gmail.com" || req.user.email === "deanla@gmail.com")) {
+	// if (req.user && (req.user.isAdmin)) {
+	if (1===1) {
+        console.log('hi admin');
         res.render('reset', {
             title: 'reset password',
             user: {"email": req.user.email, "isAdmin": true},
