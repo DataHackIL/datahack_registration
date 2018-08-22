@@ -24,7 +24,7 @@ var upload = multer({
 });
 module.exports = function(app) {
 	app.route('/users')
-		.post(users.permissionCheck,users.isRegistrationOpen, users.create)
+		.post(users.permissionCheck, users.isRegistrationOpen, users.create)
 		.get(users.permissionCheck, users.list);
 	app.route('/users/:userId')
 		.get(users.logedIn, users.read)
@@ -34,19 +34,17 @@ module.exports = function(app) {
 	app.route('/register')
 		.get(users.isRegistrationOpen, users.renderRegister)
 		.post(users.isRegistrationOpen, upload.single('cv'), users.register);
-	app.route('/printUsers').get(users.permissionCheck,users.renderPrintUsers);
-	app.route('/admin').get(users.permissionCheck,users.renderPrintUsers);
-	app.route('/login')
+	app.route('/printUsers').get(users.permissionCheck, users.renderPrintUsers);
+	app.route('/admin').get(users.permissionCheck, users.renderPrintUsers);
+    app.route('/reset').get(users.permissionCheck, users.renderReset);
+    app.route('/login')
 		.get(users.renderLogin)
 		.post(passport.authenticate('local', {
 			successRedirect: '/team-up',
 			failureRedirect: '/login',
 			failureFlash: true
 		}));
-	app.route('/rsvp/:userIdToUpdate').get(users.userAgree);
-	app.route('/reset').get(
-								users.permissionCheck,
-								users.renderReset);
+    app.route('/rsvp/:userIdToUpdate').get(users.userAgree);
 	app.get('/logout', users.logout);
 	app.post('/contactus', users.sendMail);
 };
