@@ -5,14 +5,17 @@ var config = require('./config'),
 	flash = require('connect-flash'),
 	session = require('express-session'),
 	helmet = require('helmet');
+	path = require('path');
+	morgan = require('morgan')
 
 module.exports = function() {
 	var app = express();
 
-	app.use(bodyParser.urlencoded({
-		extended: true
-	}));
+	app.use(morgan('tiny'))
 
+	app.use(bodyParser.urlencoded({
+		extended: false
+	}));
 	app.use(bodyParser.json());
 
 	app.use(session({
@@ -33,6 +36,9 @@ module.exports = function() {
 	require('../app/routes/teams.server.routes.js')(app);
 
 	app.use(express.static('./public'));
+	app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+	});
 
 	app.use(function(err, req, res, next) {
 		console.error(err.stack);

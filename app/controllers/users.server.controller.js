@@ -2,6 +2,7 @@ var User = require('mongoose').model('User'),
     Param = require('mongoose').model('Param'),
     passport = require('passport'),
     nodemailer = require('nodemailer');
+    debug = require('debug')('registration:controllers:users')
 
 
 //Init the SMTP transport
@@ -18,7 +19,13 @@ var smtpConfig = {
         rejectUnauthorized: false
     }
 };
-var transporter = nodemailer.createTransport(smtpConfig);
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+      user: 'datahackil2018@gmail.com',
+      pass: process.env.EMAIL_PASS
+  }
+});
 
 function sendEmail(body) {
     // setup e-mail data with unicode symbols
@@ -40,21 +47,21 @@ function sendEmail(body) {
     });
 }
 
-function sendEmailConduct(body) {
+function sendEmailConduct(req) {
+    debug('code of conduct request body: %O', req)
     var mailOptions = {
         from: "contact@datahack-il.com", // sender address
-        to: 'deanla@gmail.com', // list of receivers
+        to: 'datahackil2018@gmail.com', // list of receivers
         subject: 'CODE OF CONDUCT VIOLATION', // Subject line
-        // text: body.message,// plaintext body
-        // html: '<h1> ' + body.name + '(' + body.email + ')</h1><h2> This is the message:</h2><h3>' + body.message + '</h3>'// html body
-        text: "test"
+        text: req.body.issue_field,// plaintext body
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
+            debug('code of conduct email failed: %o', error)
             return console.log(error);
         }
-        console.log('Message sent: ' + info.response);
+        debug('code of conduct email sent: %o', info.response);
     });
 }
 
@@ -85,9 +92,7 @@ exports.sendMail = function (req, res, next) {
 };
 
 exports.sendConduct = function (req, res, next) {
-    // alert('CONDUCT');
-    sendEmailConduct(req.body);
-    // alert(req.body);
+    sendEmailConduct(req);
     res.send("Sent")
 };
 
