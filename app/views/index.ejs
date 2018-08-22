@@ -87,6 +87,18 @@
 			<div  class="row">
 				<h2 style="color:white">What do you want to do?</h2>
 			</div>
+			<hr>
+			<div class="row" style="color:white">
+				<span class="glyphicon glyphicon-info-sign"></span> <span class="how-it-works" onclick="
+
+				modal({
+                        type: 'info',
+                        title: 'Information',
+                        text: '<p><b>If you have a team</b>, assign a team captain that will log in, create the team and add the other members by their e-mails. If your team is looking for additional members, write a short description about youselves and your idea (if you have one).</p><p><b>If you don\'t have a team</b>, log in and see what other teams already formed and what kind of team members they are looking for. To join a team you\'ll need to contact it\'s captain (you\'ll see his email in the team\'s \'\'add\'\').</p><p>If you are working on a service or product-oriented project, we recommend you to try and incorporate a designer and/or a product person in your team.</p><p> If you have any questions or thoughts feel free to contact us at contact@datahack-il.com.</p>',
+						animate:true
+				});
+				" style="cursor:pointer;">How does it work?</span>
+			</div>
 			<div class="row">
 				<div class="col-lg-12">
 					<div id="openTeam" class="teamBox btn btn-1 btn-1d" onclick="location.href = '/<%if (user.isMember && user.email !== team.admin_email){%>myTeam<%}else if (user.isMember) {%>updateTeam <%}else{%>createTeam<%}%>';">
@@ -111,17 +123,20 @@
 					</div>
 				</div>
 			</div>
-			<div class="row" style="color:white">
-				<span class="glyphicon glyphicon-info-sign"></span> <span class="how-it-works" onclick="
-
-				modal({
-                        type: 'info',
-                        title: 'Information',
-                        text: '<p><b>If you have a team</b>, assign a team captain that will log in, create the team and add the other members by their e-mails. If your team is looking for additional members, write a short description about youselves and your idea (if you have one).</p><p><b>If you don\'t have a team</b>, log in and see what other teams already formed and what kind of team members they are looking for. To join a team you\'ll need to contact it\'s captain (you\'ll see his email in the team\'s \'\'add\'\').</p><p>If you are working on a service or product-oriented project, we recommend you to try and incorporate a designer and/or a product person in your team.</p><p> If you have any questions or thoughts feel free to contact us at contact@datahack-il.com.</p>',
-						animate:true
-				});
-				" style="cursor:pointer;">How does it work?</span>
+			<hr>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="btn btn-1 btn-1d" onclick="location.href = '/join-chat';">
+						Join The Whatsapp Group
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="btn btn-1 btn-1d" onclick="location.href = '/code-of-conduct';">
+						Report Harassment
+					</div>
+				</div>
 			</div>
+
 
 			<% } else {%>
 			<h1><b>Welcome to DataHack 2018 Team Registration Website</b></h1>
