@@ -93,7 +93,8 @@ exports.sendMail = function (req, res, next) {
 
 exports.sendConduct = function (req, res, next) {
     sendEmailConduct(req);
-    res.send("Sent")
+    res.send("Sents")
+    // res.get('/code-of-conduct')
 };
 
 var getErrorMessage = function (err) {

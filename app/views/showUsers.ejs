@@ -88,19 +88,19 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-								<table>
+								<table class="table">
 									<tr>
-										<td>name</td>
-										<td>email</td>
-										<td>phone</td>
-										<td>institute</td>
-										<td>degree</td>
-										<td>size</td>
-										<td>food</td>
-										<td>skills</td>
-										<td>accepted?</td>
-										<td>in team?</td>
-										<td>team id</td>
+										<th scope="col">name</th>
+										<th scope="col">email</th>
+										<th scope="col">phone</th>
+										<th scope="col">institute</th>
+										<th scope="col">degree</th>
+										<th scope="col">size</th>
+										<th scope="col">food</th>
+										<th scope="col">skills</th>
+										<th scope="col">accepted?</th>
+										<th scope="col">in team?</th>
+										<th scope="col">team id</th>
 									</tr>
 
 									<% for(var i=0; i<users.length; i++) {%>
@@ -114,6 +114,7 @@
 										<td><input disabled class="printInputText" value="<%= users[i].food %>" type="text" id="food"/></td>
 										<td><select name="skills" id="skills">
 												<%if (users[i].tags){%>
+												<%Object%>
 												<% Object.keys(users[i].tags).forEach(function(key) { %>
 												<option><%= users[i].tags[key] %> </option>
 												<% })} %>
