@@ -8,6 +8,7 @@ module.exports = function (app) {
     app.route('/code-of-conduct')
         .get(index.renderCodeOfConduct)
         .post(upload.array() ,users.sendConduct);
+    app.get('/gear', index.renderGear);
     app.get('/join-chat', index.redirectToWhatsapp);
     app.get('/team-up', teams.isTeamsOpen, index.render);
     app.get('/mingle', teams.isTeamsOpen, index.renderMingle);

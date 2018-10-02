@@ -58,6 +58,10 @@ exports.renderCodeOfConduct = function (req, res) {
     res.render('codeOfConduct')
 };
 
+exports.renderGear = function (req, res) {
+    res.render('gear')
+};
+
 exports.redirectToWhatsapp = function (req, res) {
     res.redirect('https://chat.whatsapp.com/4wANoVKF4VdCUmNnYvBpO9')
 };
