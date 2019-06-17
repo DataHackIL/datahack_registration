@@ -22,7 +22,7 @@ var smtpConfig = {
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-      user: 'datahackil2018@gmail.com',
+      user: 'datahackoldregtest@gmail.com',
       pass: process.env.EMAIL_PASS
   }
 });
