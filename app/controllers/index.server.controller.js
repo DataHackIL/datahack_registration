@@ -63,7 +63,7 @@ exports.renderGear = function (req, res) {
 };
 
 exports.redirectToWhatsapp = function (req, res) {
-    res.redirect('https://chat.whatsapp.com/FcVj6qaK9qzJQfVILrRMMJ')
+    res.redirect('https://chat.whatsapp.com/CE4XYMG5bHbDA8xPSihq4X')
 };
 /*
 This function checks in parameter schema if the timer is on

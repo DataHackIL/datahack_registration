@@ -9,7 +9,7 @@
 	<title>DataHack 2019 Registration</title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,100,300,500">
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/form-elements.css">
@@ -83,13 +83,13 @@
 		<div class="container">
 			<% if ( user ) { %>
 			<!-- user don't have a team - show 2 options join\create -->
-			<h1 style="color:white">Hello <%=user.first_name%>. Welcome to DataHack 2019's team platform!</h1>
+			<h1 class="other-color">Hello <%=user.first_name%>. Welcome to DataHack 2019's team platform!</h1>
 			<div  class="row">
-				<h2 style="color:white">What do you want to do?</h2>
+				<h2 class="other-color">What do you want to do?</h2>
 			</div>
-			<hr>
-			<div class="row" style="color:white">
-				<span class="glyphicon glyphicon-info-sign"></span> <span class="how-it-works" onclick="
+<!--			<hr class="other-color">-->
+			<div class="row" class="other-color">
+				<span class="glyphicon glyphicon-info-sign other-color"></span> <span class="how-it-works" onclick="
 
 				modal({
                         type: 'info',
@@ -139,8 +139,8 @@
 
 
 			<% } else {%>
-			<h1><b>Welcome to DataHack 2019 Team Registration Website</b></h1>
-			<h2>Please login with your credentials used in registration.</h2>
+			<h1><b class="other-color">Welcome to DataHack 2019 Team Registration Website</b></h1>
+			<h2 class="other-color">Please login with your credentials used in registration.</h2>
 			<div id="signinRow" class="row">
 				<div class="col-lg-12">
 					<form class="form-signin" action="/login" method="post">
