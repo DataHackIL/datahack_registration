@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
   $.backstretch("assets/img/backgrounds/1.jpg", {
     overlay: {
       init: true,
-      background: "#8341e8",
+      background: "#3F21D6",
       opacity: 0.85
     }
   });

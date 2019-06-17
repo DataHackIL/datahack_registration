@@ -46,7 +46,7 @@ strong {
 }
 
 a, a:hover, a:focus {
-    color: #ff6b6d;
+    color: #2BFBB7;
     text-decoration: none;
     -o-transition: all .3s;
     -moz-transition: all .3s;
@@ -80,38 +80,40 @@ img {
 }
 
 .blue {
-    color: #ff6b6d;
+    color: #2BFBB7;
 }
 
 ::-moz-selection {
-    background: #ff6b6d;
+    background: #2BFBB7;
     color: #fff;
     text-shadow: none;
 }
 
 ::selection {
-    background: #ff6b6d;
+    background: #2BFBB7;
     color: #fff;
     text-shadow: none;
 }
 
 .btn-1d:active,
 .btn-1d:hover {
-    color: #8341e8;
+    color: #3f21d6;
     /*width:100%;*/
 }
+
 /*Dedicated to Dima*/
 .btn-1d:hover:after {
     width: 101%;
     opacity: 1;
 
 }
+
 .btn-link-1 {
     display: inline-block;
     height: 50px;
     margin: 0 5px;
     padding: 16px 20px 0 20px;
-    background: #ff6b6d;
+    background: #2BFBB7;
     font-size: 16px;
     font-weight: 300;
     line-height: 16px;
@@ -152,7 +154,9 @@ img {
 }
 
 #reg_but {
-    background: #ff6b6d;
+    background: #2BFBB7;
+    color: black;
+    font-size: 2em;
 }
 
 .coc {
@@ -172,21 +176,29 @@ img {
 }
 
 select.form-control {
-     height: 50px;
-     margin: 0;
-     padding: 0 20px;
-     vertical-align: middle;
-     background: #f8f8f8;
-     border: 3px solid #ddd;
-     font-family: 'Roboto', sans-serif;
-     font-size: 20px;
-     font-weight: 300;
-     line-height: 50px;
-     color: #888;
-     -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
-     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
-     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
- }
+    height: 50px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
 
 div#tags {
     border: 0;
@@ -207,6 +219,7 @@ div#tags {
 #job-list {
     margin-bottom: 120px;
 }
+
 /***** Top menu *****/
 
 .navbar {
@@ -267,12 +280,12 @@ ul.navbar-nav {
 .navbar-inverse ul.navbar-nav li .li-social a:hover,
 .navbar-inverse ul.navbar-nav li .li-social a:focus {
     border: 0;
-    color: #ff6b6d;
+    color: #2BFBB7;
 }
 
 .navbar-brand {
     width: 123px;
-    background: url(../img/logo.png) left center no-repeat;
+    background: url(../img/logo_old.png) left center no-repeat;
     text-indent: -99999px;
 }
 
@@ -351,7 +364,7 @@ ul.navbar-nav {
     width: 25%;
     padding-top: 5px;
     font-size: 66px;
-    color: #8341e8;
+    color: #2bfbb7;
     line-height: 100px;
     text-align: right;
 
@@ -376,7 +389,7 @@ ul.navbar-nav {
 }
 
 .form-bottom form .input-error {
-    border-color: #ff6b6d;
+    border-color: #2BFBB7;
 }
 
 /*teams*/
@@ -402,7 +415,7 @@ ul.navbar-nav {
 }
 
 i[id^="mem_rem_"]:hover {
-    color: #ff6b6d;
+    color: #2BFBB7;
 }
 
 #add_mem {
@@ -410,7 +423,7 @@ i[id^="mem_rem_"]:hover {
 }
 
 #add_mem:hover {
-    color: #ff6b6d;
+    color: #2BFBB7;
 }
 
 .how-it-works:hover {
@@ -473,7 +486,7 @@ footer {
 }
 
 #information:hover {
-    color: #8341e8;
+    color: #3F21D6;
 }
 
 .main-site-head-team {

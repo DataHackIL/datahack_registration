@@ -11,7 +11,7 @@ var smtpConfig = {
     port: 587,
     secure: true, // use SSL
     auth: {
-        // user: 'datahackil2018@gmail.com',
+        // user: 'datahackil2019@gmail.com',
         user: 'datahack2015@gmail.com',
         pass: process.env.EMAIL_PASS
     },
@@ -33,7 +33,7 @@ function sendEmail(body) {
     var mailOptions = {
         from: body.email, // sender address
         to: '', // list of receivers
-        subject: 'Someone contact DataHack 2018 website!', // Subject line
+        subject: 'Someone contact DataHack 2019 website!', // Subject line
         text: body.message,// plaintext body
         html: '<h1> ' + body.name + '(' + body.email + ')</h1><h2> This is his message:</h2><h3>' + body.message + '</h3>'// html body
     };
@@ -416,7 +416,7 @@ exports.userAgree = function (req, res, next) {
                     if (user.accepted) {
                         msgToSend = 'You have already RSVP\'d.';
                     } else {
-                        msgToSend = "You have accepted the rules & RSVP'd for DataHack 2018!";
+                        msgToSend = "You have accepted the rules & RSVP'd for DataHack 2019!";
                         sendEmailRsvp(user.email, user.first_name, user.last_name);
                     }
 
