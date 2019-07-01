@@ -153,7 +153,8 @@
 								<div class="col-sm-6">
 									<div id="wrap-lookingText" class="form-group">
 										<label for="form-lookingText">What are you looking for?</label>
-										<textarea required name="lookingText" placeholder="Please describe what kind of members you are looking for to join your team, e.g. Designers, Programmers and etc." class="form-lookingText form-control" id="form-lookingText" ></textarea>
+										<textarea required name="lookingText" placeholder="Please describe what kind of members you are looking for to join your team, e.g. Designers, Programmers and etc."
+												  class="form-lookingText form-control" id="form-lookingText" ></textarea>
 									</div>
 								</div>
 							</div>
@@ -165,10 +166,10 @@
 
 										<select style="width: 100%" name="challenge" class="form-team-challenge" id="challenge">
 											<option value="idk" selected="selected">We don't know yet.</option>
-											<option value="intel">Yes, Intel's challenge.</option>
-											<option value="microsoft">Yes, Microsoft's challenge.</option>
+											<option value="orcam">Yes, Orcam's challenge.</option>
+											<option value="armis">Yes, Armis' challenge.</option>
 											<option value="lightricks">Yes, Lightricks's challenge.</option>
-											<option value="innoviz">Yes, Innoviz's challenge.</option>
+											<option value="monday.com">Yes, Monday's learning challenge.</option>
 											<option value='no'>No.</option>
 										</select>
 									</div>
@@ -185,14 +186,12 @@
 								<div class="col-sm-12 checkboxdiv">
 									<div id="wrap-datahackCup" class="form-group">
 										<h3><input type="checkbox" name="datahackCup">
-											We want to compete in the DataHack Cup!
-											<span id="information" data-tooltip="The DataHack Cup is a track for teams made up entirely of employees of a single company. Each company can send a single team, and these teams will duke it out in a separate track for glory, prizes and the DataHack Cup! (teams in this track will not compete in the main competition)"
+											We are coming as part of a company:
+											<span id="information" data-tooltip="Dathhack encourages companies to send their best teams to compete"
 											class="form-pass-info glyphicon glyphicon-info-sign">
-												<img
-													class="workshop"
-													src="/siteImages/datahack_cup_tiny.png"
-													style="margin: 0 0 0 0;"
-													alt=""/>
+											<input type="text" name="company_name" placeholder="Company" class="form-team-name form-control" id="form-company-name" required>
+
+
 											</span>
 										</h3>
 									</div>
