@@ -156,10 +156,10 @@
 
                                         <select style="width: 100%" name="challenge" class="form-team-challenge" id="challenge">
                                             <option value="idk" <%if (team.challenge == "idk") {%>selected="selected" <%}%>>We don't know yet.</option>
-                                            <option value="intel" <%if (team.challenge == "intel") {%>selected="selected" <%}%>>Yes, Intel's challenge.</option>
-                                            <option value="rafael" <%if (team.challenge == "rafael") {%>selected="selected" <%}%>>Yes, Rafael's challenge.</option>
-                                            <option value="sparkbeyond" <%if (team.challenge == "sparkbeyond") {%>selected="selected" <%}%>>Yes, SparkBeyond's challenge.</option>
                                             <option value="orcam" <%if (team.challenge == "orcam") {%>selected="selected" <%}%>>Yes, Orcam's challenge.</option>
+                                            <option value="armis" <%if (team.challenge == "armis") {%>selected="selected" <%}%>>Yes, Armis' challenge.</option>
+                                            <option value="lightricks" <%if (team.challenge == "lightricks") {%>selected="selected" <%}%>>Yes, Lightricks' challenge.</option>
+                                            <option value="monday" <%if (team.challenge == "monday") {%>selected="selected" <%}%>>Yes, Monday's learning challenge.</option>
                                             <option value="no" <%if (team.challenge == "no") {%>selected="selected" <%}%>>No.</option>
                                         </select>
                                     </div>
@@ -175,17 +175,15 @@
                             <div class="row">
                                 <div class="col-sm-12 checkboxdiv">
                                     <div id="wrap-datahackCup" class="form-group">
-                                        <h3><input type="checkbox" name="datahackCup" id="form-datahackCup" class="form-team-datahackCup">
-                                            We want to compete in the DataHack Cup!
-                                            <span id="information" data-tooltip="The DataHack Cup is a track for teams made up entirely of employees of a single company. Each company can send a single team, and these teams will duke it out in a separate track for glory, prizes and the DataHack Cup! (teams in this track will not compete in the main competition)"
+                                        <h3><input type="checkbox" name="datahackCup" id="form-datahackCup" class="form-team-datahackCup" value="<%=team.datahackCup%>">
+                                            We are coming as part of a company
+                                            <span id="information"
+                                                  data-tooltip="The DataHack Cup is a track for teams made up entirely of employees of a single company. Each company can send a single team, and these teams will duke it out in a separate track for glory, prizes and the DataHack Cup! (teams in this track will not compete in the main competition)"
                                             class="form-pass-info glyphicon glyphicon-info-sign">
-                                                <img
-                                                    class="workshop"
-                                                    src="/siteImages/datahack_cup_tiny.png"
-                                                    style="margin: 0 0 0 0;"
-                                                    alt=""/>
                                             </span>
                                         </h3>
+                                        <input type="text" name="company_name" value="<%=team.company_name%>" placeholder="Your team name...." class="form-team-name form-control" id="form-first-name" required>
+
                                     </div>
                                 </div>
                             </div>
