@@ -3,39 +3,39 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>DataHack 2019 Registration</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DataHack 2019 Registration</title>
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,100,300,500">
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/form-elements.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,100,300,500">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/form-elements.css">
 
-	<link rel="stylesheet" href="assets/css/jquery.qtip.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/CreativeButtons/css/default.css" />
-	<link rel="stylesheet" type="text/css" href="assets/CreativeButtons/css/component.css" />
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link href="assets/css/jquery.modal.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/jquery.qtip.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/CreativeButtons/css/default.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/CreativeButtons/css/component.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/jquery.modal.css" type="text/css" rel="stylesheet"/>
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<script src="assets/CreativeButtons/js/modernizr.custom.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="assets/CreativeButtons/js/modernizr.custom.js"></script>
 
 
-	<![endif]-->
+    <![endif]-->
 
-	<!-- Favicon and touch icons -->
-	<link rel="shortcut icon" href="assets/ico/favicon.png">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
 </head>
 
@@ -43,193 +43,242 @@
 
 <!-- Top menu -->
 <nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a href="/"><img  class="logo-hack" src="/siteImages/mini-logo.png" alt=""/></a>
-		</div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="top-navbar-1">
-			<ul class="nav navbar-nav navbar-right">
-				<li>
-					<% if (user) {%>
-					<a href="/logout">Logout</a>
-					<%} else {%>
-					<a href="/register">Register</a>
-					<a href="/login">Login</a>
-					<% } %>
-				</li>
-				<li>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/"><img class="logo-hack" src="/siteImages/mini-logo.png" alt=""/></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="top-navbar-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <% if (user) { %>
+                        <a href="/logout">Logout</a>
+                    <% } else { %>
+                        <a href="/register">Register</a>
+                        <a href="/login">Login</a>
+                    <% } %>
+                </li>
+                <li>
 	                <span class="li-social">
 					<a href="/team-up"><i class="fa fa-home"></i></a>
 	                </span>
-				</li>
-				<li>
+                </li>
+                <li>
                     <a href="http://www.datahack-il.com/" target="_blank"><strong>DataHack-il.com</strong></a>
                     <span class="li-social">
 						<a href="https://www.facebook.com/datahackil" target="_blank"><i class="fa fa-facebook"></i></a>
 					</span>
-				</li>
+                </li>
 
-			</ul>
-		</div>
-	</div>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <!-- Top content -->
 <div class="top-content">
 
-	<div class="inner-bg">
-		<div class="container">
-			<!-- logged in user-->
-			<% if ( user ) { %>
-			<div class="row">
-				<div class="col-sm-12 text">
-					<h1><strong>DataHack 2019</strong> Team Creation Form</h1>
-					<div class="description">
-						<p><!--
+    <div class="inner-bg">
+        <div class="container">
+            <!-- logged in user-->
+            <% if ( user ) { %>
+            <div class="row">
+                <div class="col-sm-12 text">
+                    <h1><strong>DataHack 2019</strong> Team Creation Form</h1>
+                    <div class="description">
+                        <p><!--
 							Please fill the following form with all the information.
 						</p> -->
-					</div>
-				</div>
-				<div class="col-sm-12 form-box">
-					<div class="form-top">
-						<div class="form-top-left">
-							<h3>Instructions and FAQs</h3>
-							<p>Please fill the following form to register your team.
-								<ul>
-								  <li>You can update any of the fields on this form at any point in time.</li>
-								  <li>In order to add a member, insert that member's email address, <b>as used to register to DataHack 2019</b>, to one of the fields at the bottom of this form.</li>
-								  <li>You can only add participants that are already registered to the hackathon.</li>
-								  <li>You do <b>not</b> need to insert your own email address.</li>
-								  <li>You can add up to 4 additional members to your team, to a total of 5.</li>
-								  <li>You can also start with no other members, and add them later.</li>
-								</ul>
-								You can also <b><a href="https://www.facebook.com/groups/datahack2015/" target="_blank">join our Facebook group</a></b> to find partners or simply a team to join!
-							</p>
-						</div>
-						<div class="form-top-right">
-							<i class="fa fa-pencil"></i>
-						</div>
-					</div>
-					<div class="form-bottom">
-						<form id="form-team-create" role="form" action="/teams" method="post" class="registration-form">
-							<input type="hidden" name="admin_email" value="<%=user.email%>"/>
-							<div class="row">
-								<div class=" col-sm-6">
-									<div class="form-group">
-										<label for="form-team-name">Team name</label>
-										<input type="text" name="team_name" placeholder="Your team name...." class="form-team-name form-control" id="form-first-name" required>
-									</div>
-								</div>
+                    </div>
+                </div>
+                <div class="col-sm-12 form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Instructions and FAQs</h3>
+                            <p>Please fill the following form to register your team.
+                            <ul>
+                                <li>You can update any of the fields on this form at any point in time.</li>
+                                <li>In order to add a member, insert that member's email address, <b>as used to register
+                                        to DataHack 2019</b>, to one of the fields at the bottom of this form.
+                                </li>
+                                <li>You can only add participants that are already registered to the hackathon.</li>
+                                <li>You do <b>not</b> need to insert your own email address.</li>
+                                <li>You can add up to 4 additional members to your team, to a total of 5.</li>
+                                <li>You can also start with no other members, and add them later.</li>
+                            </ul>
+                            You can also <b><a href="https://www.facebook.com/groups/datahack2015/" target="_blank">join
+                                    our Facebook group</a></b> to find partners or simply a team to join!
+                            </p>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <form id="form-team-create" role="form" action="/teams" method="post" class="registration-form">
+                            <input type="hidden" name="admin_email" value="<%= user.email %>"/>
+                            <div class="row">
+                                <div class=" col-sm-6">
+                                    <div class="form-group">
+                                        <label for="form-team-name">Team name</label>
+                                        <input type="text" name="team_name" placeholder="Your team name...."
+                                               class="form-team-name form-control" id="form-first-name" required>
+                                    </div>
+                                </div>
 
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label for="form-idea">Project idea</label>
-										<textarea name="idea" placeholder="Please briefly describe your project idea (leave blank if undecided; you'll be able to update this later)." class="form-idea form-control" id="form-idea"></textarea>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label for="form-team-isClosed">Are you looking for more team members?</label>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="form-idea">Project idea</label>
+                                        <textarea name="idea"
+                                                  placeholder="Please briefly describe your project idea (leave blank if undecided; you'll be able to update this later)."
+                                                  class="form-idea form-control" id="form-idea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="form-team-isClosed">Are you looking for more team members?</label>
 
-										<select style="width: 100%" name="isClosed" class="form-team-isClosed" id="isClosed">
-											<option value=false>Yes</option>
-											<option value=true>No</option>
-										</select>
-										<p style="display: block;" id="moreMembersInfo">
-											<b>*</b> You have opened the option for matching other members to join your team.
-											Matching requests will be sent to your email.
-											After accepting new members to your team, make sure you manually add their email here, in the DataHack 2019 team platform.</p>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div id="wrap-lookingText" class="form-group">
-										<label for="form-lookingText">What are you looking for?</label>
-										<textarea required name="lookingText" placeholder="Please describe what kind of members you are looking for to join your team, e.g. Designers, Programmers and etc."
-												  class="form-lookingText form-control" id="form-lookingText" ></textarea>
-									</div>
-								</div>
-							</div>
+                                        <select style="width: 100%" name="isClosed" class="form-team-isClosed"
+                                                id="isClosed">
+                                            <option value=false>Yes</option>
+                                            <option value=true>No</option>
+                                        </select>
+                                        <p style="display: block;" id="moreMembersInfo">
+                                            <b>*</b> You have opened the option for matching other members to join your
+                                            team.
+                                            Matching requests will be sent to your email.
+                                            After accepting new members to your team, make sure you manually add their
+                                            email here, in the DataHack 2019 team platform.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div id="wrap-lookingText" class="form-group">
+                                        <label for="form-lookingText">What are you looking for?</label>
+                                        <textarea required name="lookingText"
+                                                  placeholder="Please describe what kind of members you are looking for to join your team, e.g. Designers, Programmers and etc."
+                                                  class="form-lookingText form-control"
+                                                  id="form-lookingText"></textarea>
+                                    </div>
+                                </div>
+                            </div>
 
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label for="form-team-challenge">Do you intend to tackle one of our sponsor challenges?</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="form-team-challenge">Do you intend to tackle one of our sponsor
+                                            challenges?</label>
 
-										<select style="width: 100%" name="challenge" class="form-team-challenge" id="challenge">
-											<option value="idk" selected="selected">We don't know yet.</option>
-											<option value="orcam">Yes, Orcam's challenge.</option>
-											<option value="armis">Yes, Armis' challenge.</option>
-											<option value="lightricks">Yes, Lightricks's challenge.</option>
-											<option value="monday.com">Yes, Monday's learning challenge.</option>
-											<option value='no'>No.</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div id="wrap-dataset" class="form-group">
-										<label for="form-dataset">What dataset do you intend to use?</label>
-										<textarea required name="dataset" placeholder="If the dataset doesn't have a well-known name, please briefly describe it (write 'Undecided' if undecided; you can update this at any point)." class="form-lookingText form-control" id="form-lookingText" ></textarea>
-									</div>
-								</div>
-							</div>
+                                        <select style="width: 100%" name="challenge" class="form-team-challenge"
+                                                id="challenge">
+                                            <option value="idk" selected="selected">We don't know yet.</option>
+                                            <option value="orcam">Yes, Orcam's challenge.</option>
+                                            <option value="armis">Yes, Armis' challenge.</option>
+                                            <option value="lightricks">Yes, Lightricks's challenge.</option>
+                                            <option value="monday.com">Yes, Monday's learning challenge.</option>
+                                            <option value='no'>No.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div id="wrap-dataset" class="form-group">
+                                        <label for="form-dataset">What dataset do you intend to use?</label>
+                                        <textarea required name="dataset"
+                                                  placeholder="If the dataset doesn't have a well-known name, please briefly describe it (write 'Undecided' if undecided; you can update this at any point)."
+                                                  class="form-lookingText form-control"
+                                                  id="form-lookingText"></textarea>
+                                    </div>
+                                </div>
+                            </div>
 
-							<div class="row">
-								<div class="col-sm-12 checkboxdiv">
-									<div id="wrap-datahackCup" class="form-group">
-										<h3><input type="checkbox" name="datahackCup">
-											We are coming as part of a company:
-											<span id="information" data-tooltip="Dathhack encourages companies to send their best teams to compete"
-											class="form-pass-info glyphicon glyphicon-info-sign">
-											<input type="text" name="company_name" placeholder="Company" class="form-team-name form-control" id="form-company-name" required>
-
-
+                            <div class="row">
+                                <div class="col-sm-12 checkboxdiv">
+                                    <div id="wrap-datahackCup" class="form-group">
+                                        <h3 id="company-info">
+                                            <input type="checkbox" name="datahackCup">
+                                            We are coming as part of a company
+                                            <span id="information"
+                                                  data-tooltip="Dathhack encourages companies to send their best teams to compete"
+                                                  class="form-pass-info glyphicon glyphicon-info-sign">
+											<input type="text" name="company_name" placeholder="Company"
+                                                   class="form-team-name form-control" id="form-company-name" required>
 											</span>
-										</h3>
-									</div>
-								</div>
-							</div>
 
-							<div class="row">
-								<div class="col-sm-12">
-									<div id="members_list" class="form-group members-list">
-										<label for="form-team-name"><span id="information" data-tooltip="In order to add a member, insert the member's email as used to register to the hackathon. You don't need to insert your own email. You can add up to 4 members to your team, to a total of 5.You can also start with no other members, and add them later." class="form-pass-info glyphicon glyphicon-info-sign" data-hasqtip="128" aria-describedby="qtip-128"></span> Members <i id="add_mem" class="fa fa-user-plus fa-2x"><label class="add-mem-label">Add members</label></i></label>
-										<input type="text" name="mem0" placeholder="Member's Email (used to register to the hackathon)" class="form-member-name form-control" id="form-members-0" >
-										<i id="mem_rem_0" class="fa fa-user-times fa-2x"></i><i class="mem-loader0 fa fa-spinner fa-pulse fa-2x"></i><i class="mem-check0 fa fa-check fa-2x"></i><i class="mem-warn0 fa fa-exclamation fa-2x"></i>
-										<span class="warn-text0" style="display: block;"></span>
-										<input type="text" name="mem1" placeholder="Member's Email (used to register to the hackathon)" class="form-member-name form-control" id="form-members-1" >
-										<i id="mem_rem_1" class="fa fa-user-times fa-2x"></i><i class="mem-loader1 fa fa-spinner fa-pulse fa-2x"></i><i class="mem-check1 fa fa-check fa-2x"></i><i class="mem-warn1 fa fa-exclamation fa-2x"></i>
-										<span class="warn-text1" style="display: block;"></span>
-										<input type="text" name="mem2" placeholder="Member's Email (used to register to the hackathon)" class="form-member-name form-control" id="form-members-2" >
-										<i id="mem_rem_2" class="fa fa-user-times fa-2x"></i><i class="mem-loader2 fa fa-spinner fa-pulse fa-2x"></i><i class="mem-check2 fa fa-check fa-2x"></i><i class="mem-warn2 fa fa-exclamation fa-2x"></i>
-										<span class="warn-text2" style="display: block;"></span>
-										<input type="text" name="mem3" placeholder="Member's Email (used to register to the hackathon)" class="form-member-name form-control" id="form-members-3" >
-										<i id="mem_rem_3" class="fa fa-user-times fa-2x"></i><i class="mem-loader3 fa fa-spinner fa-pulse fa-2x"></i><i class="mem-check3 fa fa-check fa-2x"></i><i class="mem-warn3 fa fa-exclamation fa-2x"></i>
-										<span class="warn-text3" style="display: block;"></span>
-										<input type="text" name="mem4" placeholder="Member's Email (used to register to the hackathon)" class="form-member-name form-control" id="form-members-4" >
-										<i id="mem_rem_4" class="fa fa-user-times fa-2x"></i><i class="mem-loader4 fa fa-spinner fa-pulse fa-2x"></i><i class="mem-check4 fa fa-check fa-2x"></i><i class="mem-warn4 fa fa-exclamation fa-2x"></i>
-										<span class="warn-text4" style="display: block;"></span>
-									</div>
-								</div>
-							</div>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
 
-							<button type="submit" class="btn">Create Team</button>
-							<i style="display: none;" class="mem-loader-form fa fa-spinner fa-pulse fa-2x"></i>
-						</form>
-					</div>
-				</div>
-			</div>
-			<% }%>
-		</div>
-	</div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div id="members_list" class="form-group members-list">
+                                        <label for="form-team-name"><span id="information"
+                                                                          data-tooltip="In order to add a member, insert the member's email as used to register to the hackathon. You don't need to insert your own email. You can add up to 4 members to your team, to a total of 5.You can also start with no other members, and add them later."
+                                                                          class="form-pass-info glyphicon glyphicon-info-sign"
+                                                                          data-hasqtip="128"
+                                                                          aria-describedby="qtip-128"></span> Members <i
+                                                    id="add_mem" class="fa fa-user-plus fa-2x"><label
+                                                        class="add-mem-label">Add members</label></i></label>
+                                        <input type="text" name="mem0"
+                                               placeholder="Member's Email (used to register to the hackathon)"
+                                               class="form-member-name form-control" id="form-members-0">
+                                        <i id="mem_rem_0" class="fa fa-user-times fa-2x"></i><i
+                                                class="mem-loader0 fa fa-spinner fa-pulse fa-2x"></i><i
+                                                class="mem-check0 fa fa-check fa-2x"></i><i
+                                                class="mem-warn0 fa fa-exclamation fa-2x"></i>
+                                        <span class="warn-text0" style="display: block;"></span>
+                                        <input type="text" name="mem1"
+                                               placeholder="Member's Email (used to register to the hackathon)"
+                                               class="form-member-name form-control" id="form-members-1">
+                                        <i id="mem_rem_1" class="fa fa-user-times fa-2x"></i><i
+                                                class="mem-loader1 fa fa-spinner fa-pulse fa-2x"></i><i
+                                                class="mem-check1 fa fa-check fa-2x"></i><i
+                                                class="mem-warn1 fa fa-exclamation fa-2x"></i>
+                                        <span class="warn-text1" style="display: block;"></span>
+                                        <input type="text" name="mem2"
+                                               placeholder="Member's Email (used to register to the hackathon)"
+                                               class="form-member-name form-control" id="form-members-2">
+                                        <i id="mem_rem_2" class="fa fa-user-times fa-2x"></i><i
+                                                class="mem-loader2 fa fa-spinner fa-pulse fa-2x"></i><i
+                                                class="mem-check2 fa fa-check fa-2x"></i><i
+                                                class="mem-warn2 fa fa-exclamation fa-2x"></i>
+                                        <span class="warn-text2" style="display: block;"></span>
+                                        <input type="text" name="mem3"
+                                               placeholder="Member's Email (used to register to the hackathon)"
+                                               class="form-member-name form-control" id="form-members-3">
+                                        <i id="mem_rem_3" class="fa fa-user-times fa-2x"></i><i
+                                                class="mem-loader3 fa fa-spinner fa-pulse fa-2x"></i><i
+                                                class="mem-check3 fa fa-check fa-2x"></i><i
+                                                class="mem-warn3 fa fa-exclamation fa-2x"></i>
+                                        <span class="warn-text3" style="display: block;"></span>
+                                        <input type="text" name="mem4"
+                                               placeholder="Member's Email (used to register to the hackathon)"
+                                               class="form-member-name form-control" id="form-members-4">
+                                        <i id="mem_rem_4" class="fa fa-user-times fa-2x"></i><i
+                                                class="mem-loader4 fa fa-spinner fa-pulse fa-2x"></i><i
+                                                class="mem-check4 fa fa-check fa-2x"></i><i
+                                                class="mem-warn4 fa fa-exclamation fa-2x"></i>
+                                        <span class="warn-text4" style="display: block;"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn">Create Team</button>
+                            <i style="display: none;" class="mem-loader-form fa fa-spinner fa-pulse fa-2x"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
 </div>
 
 <!-- Javascript -->
@@ -244,74 +293,85 @@
 <script src="assets/js/teamManagement.js"></script>
 <script type="text/javascript" src="assets/js/jquery.modal.js"></script>
 <script type="text/javascript">
-	//create team ajax call
-	$('#form-team-create').on('submit', function(e) {
-		e.preventDefault();
-		$('.mem-loader-form').css('display','inline-block');
-		var tags = $('.tag');
-		var JTags = {};
-		$.each(tags, function(key, value) {
-			JTags[key] = $(value).attr('data-tag');
-		});
-		var mems = $('.form-member-name');
-		var Jmems = [];
-		$.each(mems, function(key, value) {
-			if ($(value).val()!==""){
-				Jmems.push($(value).val());
-			}
-		});
-		var formData = $(this).serializeObject();
-		Jmems.push(formData.admin_email);
-		formData.tags = JTags;
-		formData.members = Jmems;
-		formData.openDate = Date();
-		if (formData.idea===""){
-			formData.idea = "Not decided yet"
-		}
-		$.ajax({
-			type: "POST",
-			cache: false,
-			contentType: "application/json",
-			url: $(this).attr('action'),
-			data: JSON.stringify(formData),
-			success: function(data) {
-				var msg;
-				if ($('#isClosed').val()==='false'){
-					msg = "Your Team has been created successfully. Make sure to check your email for new members requests. Remember to add any new members to your DataHack 2019 team account - here!"
-				}else{
-					msg = "Your Team has been created successfully.";
-				}
-				modal({
-					type: 'success',
-					title: 'Success',
-					text: msg,
-					animate:true,
-					callback:function(){window.location.replace("/team-up");}
-				});
-			},
-			error: function (data) {
-				if (data.responseJSON.status !== undefined){
-					modal({
-						type: 'error',
-						title: 'Houston, We have a problem',
-						text: data.responseJSON.status,
-						animate:true
-					});
-					$('.mem-loader-form').css('display','none');
-				}
-				else{
-					modal({
-						type: 'error',
-						title: 'Houston, We have a problem',
-						text: "We have a problem. Please try again or mail us at contact@datahack-il.com",
-						animate:true
-					});
-					$('.mem-loader-form').css('display','none');
-				}
-			}
-		});
-	});
+    // Pop-in the company info!
+    $('#company-info > span').css("display", "none");
+    $('#company-info > input[type=checkbox]').change(function() {
+        if(this.checked) {
+            $('#company-info > span').css("display", "inline");
+        } else {
+            $('#company-info > span').css("display", "none");
+        }
+    });
 
+
+    //create team ajax call
+    $('#form-team-create').on('submit', function (e) {
+        e.preventDefault();
+        $('.mem-loader-form').css('display', 'inline-block');
+        var tags = $('.tag');
+        var JTags = {};
+        $.each(tags, function (key, value) {
+            JTags[key] = $(value).attr('data-tag');
+        });
+        var mems = $('.form-member-name');
+        var Jmems = [];
+        $.each(mems, function (key, value) {
+            if ($(value).val() !== "") {
+                Jmems.push($(value).val());
+            }
+        });
+        var formData = $(this).serializeObject();
+        Jmems.push(formData.admin_email);
+        formData.tags = JTags;
+        formData.members = Jmems;
+        formData.openDate = Date();
+        if (formData.idea === "") {
+            formData.idea = "Not decided yet"
+        }
+        $.ajax({
+            type: "POST",
+            cache: false,
+            contentType: "application/json",
+            url: $(this).attr('action'),
+            data: JSON.stringify(formData),
+            success: function (data) {
+                var msg;
+                if ($('#isClosed').val() === 'false') {
+                    msg = "Your Team has been created successfully. Make sure to check your email for new members requests. Remember to add any new members to your DataHack 2019 team account - here!"
+                } else {
+                    msg = "Your Team has been created successfully.";
+                }
+                modal({
+                    type: 'success',
+                    title: 'Success',
+                    text: msg,
+                    animate: true,
+                    callback: function () {
+                        window.location.replace("/team-up");
+                    }
+                });
+            },
+            error: function (data) {
+                if (data.responseJSON.status !== undefined) {
+                    modal({
+                        type: 'error',
+                        title: 'Houston, We have a problem',
+                        text: data.responseJSON.status,
+                        animate: true
+                    });
+                    $('.mem-loader-form').css('display', 'none');
+                } else {
+                    modal({
+                        type: 'error',
+                        title: 'Houston, We have a problem',
+                        text: "We have a problem. Please try again or mail us at contact@datahack-il.com",
+                        animate: true
+                    });
+                    $('.mem-loader-form').css('display', 'none');
+                }
+            }
+        });
+    });
 
 
 </script>
