@@ -146,6 +146,9 @@ $( document ).ready(function() {
         formData.tags = JTags;
         formData.members = Jmems;
         formData.openDate = Date();
+
+        formData.datahackCup = $('#form-datahackCup').is(':checked');
+
         $.ajax({
             type: "PUT",
             cache: false,
