@@ -20,6 +20,8 @@ var TeamSchema = new Schema({
 	lookingText: {type :String, default: ""},
 	isClosed: {type :Boolean, default: false},
 	datahackCup: {type :Boolean, default: false},
+}, {
+	strict: false
 });
 
 mongoose.model('Team', TeamSchema);

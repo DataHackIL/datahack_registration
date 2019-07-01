@@ -390,7 +390,7 @@ exports.preVerifyNewTeam = function (req, res, next){
  */
 exports.updateRelatedMembers = function (req, res, next){
 	if (req.team.members.length > 0){
-		User.update({team:req.team._id},{team:'', isMember:false},{multi:true},function(err, raw){
+		User.update({team:req.team._id},{team:'', isMember:false}, function(err, raw){
 			if (err){
 				return next(err);
 			}else{
