@@ -51,7 +51,7 @@ function sendEmailConduct(req) {
     debug('code of conduct request body: %O', req)
     var mailOptions = {
         from: "contact@datahack-il.com", // sender address
-        to: 'datahackil2018@gmail.com', // list of receivers
+        to: 'datahackoldregtest@gmail.com', // list of receivers
         subject: 'CODE OF CONDUCT VIOLATION', // Subject line
         text: req.body.issue_field,// plaintext body
     };
