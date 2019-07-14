@@ -293,6 +293,7 @@
 <script src="assets/js/teamManagement.js"></script>
 <script type="text/javascript" src="assets/js/jquery.modal.js"></script>
 <script type="text/javascript">
+    $('#form-company-name').val(' ');
     // Pop-in the company info!
     $('#company-info > span').css("display", "none");
     $('#company-info > input[type=checkbox]').change(function() {
@@ -305,71 +306,73 @@
 
 
     //create team ajax call
-    $('#form-team-create').on('submit', function (e) {
-        e.preventDefault();
-        $('.mem-loader-form').css('display', 'inline-block');
-        var tags = $('.tag');
-        var JTags = {};
-        $.each(tags, function (key, value) {
-            JTags[key] = $(value).attr('data-tag');
-        });
-        var mems = $('.form-member-name');
-        var Jmems = [];
-        $.each(mems, function (key, value) {
-            if ($(value).val() !== "") {
-                Jmems.push($(value).val());
-            }
-        });
-        var formData = $(this).serializeObject();
-        Jmems.push(formData.admin_email);
-        formData.tags = JTags;
-        formData.members = Jmems;
-        formData.openDate = Date();
-        if (formData.idea === "") {
-            formData.idea = "Not decided yet"
-        }
-        $.ajax({
-            type: "POST",
-            cache: false,
-            contentType: "application/json",
-            url: $(this).attr('action'),
-            data: JSON.stringify(formData),
-            success: function (data) {
-                var msg;
-                if ($('#isClosed').val() === 'false') {
-                    msg = "Your Team has been created successfully. Make sure to check your email for new members requests. Remember to add any new members to your DataHack 2019 team account - here!"
-                } else {
-                    msg = "Your Team has been created successfully.";
+    $(document).ready(function() {
+        $('#form-team-create').submit(function (e) {
+            e.preventDefault();
+            $('.mem-loader-form').css('display', 'inline-block');
+            var tags = $('.tag');
+            var JTags = {};
+            $.each(tags, function (key, value) {
+                JTags[key] = $(value).attr('data-tag');
+            });
+            var mems = $('.form-member-name');
+            var Jmems = [];
+            $.each(mems, function (key, value) {
+                if ($(value).val() !== "") {
+                    Jmems.push($(value).val());
                 }
-                modal({
-                    type: 'success',
-                    title: 'Success',
-                    text: msg,
-                    animate: true,
-                    callback: function () {
-                        window.location.replace("/team-up");
+            });
+            var formData = $(this).serializeObject();
+            Jmems.push(formData.admin_email);
+            formData.tags = JTags;
+            formData.members = Jmems;
+            formData.openDate = Date();
+            if (formData.idea === "") {
+                formData.idea = "Not decided yet"
+            }
+            $.ajax({
+                type: "POST",
+                cache: false,
+                contentType: "application/json",
+                url: $(this).attr('action'),
+                data: JSON.stringify(formData),
+                success: function (data) {
+                    var msg;
+                    if ($('#isClosed').val() === 'false') {
+                        msg = "Your Team has been created successfully. Make sure to check your email for new members requests. Remember to add any new members to your DataHack 2019 team account - here!"
+                    } else {
+                        msg = "Your Team has been created successfully.";
                     }
-                });
-            },
-            error: function (data) {
-                if (data.responseJSON.status !== undefined) {
                     modal({
-                        type: 'error',
-                        title: 'Houston, We have a problem',
-                        text: data.responseJSON.status,
-                        animate: true
+                        type: 'success',
+                        title: 'Success',
+                        text: msg,
+                        animate: true,
+                        callback: function () {
+                            window.location.replace("/team-up");
+                        }
                     });
-                    $('.mem-loader-form').css('display', 'none');
-                } else {
-                    modal({
-                        type: 'error',
-                        title: 'Houston, We have a problem',
-                        text: "We have a problem. Please try again or mail us at contact@datahack-il.com",
-                        animate: true
-                    });
-                    $('.mem-loader-form').css('display', 'none');
+                },
+                error: function (data) {
+                    if (data.responseJSON.status !== undefined) {
+                        modal({
+                            type: 'error',
+                            title: 'Houston, We have a problem',
+                            text: data.responseJSON.status,
+                            animate: true
+                        });
+                        $('.mem-loader-form').css('display', 'none');
+                    } else {
+                        modal({
+                            type: 'error',
+                            title: 'Houston, We have a problem',
+                            text: "We have a problem. Please try again or mail us at contact@datahack-il.com",
+                            animate: true
+                        });
+                        $('.mem-loader-form').css('display', 'none');
+                    }
                 }
-            }
+            });
         });
     });
 
