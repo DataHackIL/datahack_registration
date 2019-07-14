@@ -33,6 +33,7 @@ var UserSchema = new Schema({
 	bus: {type :Boolean, default: false},
 	track: String,
 	toc: {type :Boolean, default: false},
+	workshop: {type :Boolean, default: false},
 	conduct: {type :Boolean, default: false},
 	tags: Object,
 	regDate: String,
