@@ -13,14 +13,14 @@ var db = mongoose(),
     app = express(),
     passport = passport()
 
-// options = {
-//     key: fs.readFileSync('./key.pem'),
-//     cert: fs.readFileSync('./cert.pem'),
-//     passphrase: 'SuperSecret'
-// }
+app.use(require('helmet')());
+ options = {
+     cert: fs.readFileSync('./fullchain.pem'),
+     key: fs.readFileSync('./privkey.pem'),
+ }
 
 app.listen(config.port);
-// https.createServer(options, app).listen(8443)
+https.createServer(options, app).listen(443)
 
 module.exports = app
 console.log(process.env.NODE_ENV + ' server running at http://' + config.host + ':' + config.port)
