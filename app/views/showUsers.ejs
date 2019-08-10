@@ -103,6 +103,7 @@
                             <th scope="col">accepted?</th>
                             <th scope="col">in team?</th>
                             <th scope="col">team id</th>
+                            <th scope="col">datalearn?</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -137,6 +138,12 @@
                                     />
                                 </td>
                                 <td><%= users[i].team %></td>
+                                <td><input id="<%= users[i]._id %>" type="checkbox" name="isDatalearn"
+                                    <% if (users[i].workshop) { %>
+                                           checked
+                                            <% } %>
+                                    />
+                                </td>
                             </tr>
                         <% } %>
                         </tbody>
