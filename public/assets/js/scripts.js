@@ -90,49 +90,77 @@ jQuery(document).ready(function() {
     }
   });
 
-  $('input[name=isAccepted]').click(function() {
-    var email = $('#' + $(this)[0].id).data('email');
-    console.log($(this).is(":checked"));
-    $.ajax({
-      url: '/users/' + $(this).attr('id'),
-      type: 'PUT',
-      data: {
-        accepted: $(this).is(":checked")
-      },
-      success: function(data) {
-        if (data.status === 'ok') {
-          alert("user changed");
-          $(this).attr("checked", $(this).is(":checked"));
-        } else {
-          alert("cant update user");
+  function postValue(name, dbKey) {
+    $('input[name=' + name + ']').click(function() {
+      console.log($(this).is(":checked"));
+      $.ajax({
+        url: '/users/' + $(this).attr('id'),
+        type: 'PUT',
+        data: {
+          [dbKey]: $(this).is(":checked")
+        },
+        success: function(data) {
+          if (data.status === 'ok') {
+            alert("user changed");
+            $(this).attr("checked", $(this).is(":checked"));
+          } else {
+            alert("cant update user");
+          }
+        },
+        error: function(jqXHR) {
+          console.log(jqXHR.responseText + ' :: ' + jqXHR.statusText);
         }
-      },
-      error: function(jqXHR) {
-        console.log(jqXHR.responseText + ' :: ' + jqXHR.statusText);
-      }
+      });
     });
-  });
+  }
 
-  $('input[name=isMember]').click(function() {
-    $.ajax({
-      url: '/users/' + $(this).data('uid'),
-      type: 'PUT',
-      data: {
-        isMember: $(this).is(":checked")
-      },
-      success: function(data) {
-        if (data.status === 'ok') {
-          alert("user changed");
-          $(this).attr("checked", $(this).is(":checked"));
-        } else {
-          alert("cant update user");
-        }
-      },
-      error: function(jqXHR) {
-        console.log(jqXHR.responseText + ' :: ' + jqXHR.statusText);
-      }
-    });
-  });
+  postValue('isAccepted', 'accepted')
+  postValue('isMember', 'isMember')
+  postValue('acceptedToDatalearn', 'acceptedToWorkshop')
+
+  // $('input[name=isAccepted]').click(function() {
+  //   var email = $('#' + $(this)[0].id).data('email');
+  //   console.log($(this).is(":checked"));
+  //   $.ajax({
+  //     url: '/users/' + $(this).attr('id'),
+  //     type: 'PUT',
+  //     data: {
+  //       accepted: $(this).is(":checked")
+  //     },
+  //     success: function(data) {
+  //       if (data.status === 'ok') {
+  //         alert("user changed");
+  //         $(this).attr("checked", $(this).is(":checked"));
+  //       } else {
+  //         alert("cant update user");
+  //       }
+  //     },
+  //     error: function(jqXHR) {
+  //       console.log(jqXHR.responseText + ' :: ' + jqXHR.statusText);
+  //     }
+  //   });
+  // });
+
+  // $('input[name=isMember]').click(function() {
+  //   $.ajax({
+  //     url: '/users/' + $(this).data('uid'),
+  //     type: 'PUT',
+  //     data: {
+  //       isMember: $(this).is(":checked")
+  //     },
+  //     success: function(data) {
+  //       if (data.status === 'ok') {
+  //         alert("user changed");
+  //         $(this).attr("checked", $(this).is(":checked"));
+  //       } else {
+  //         alert("cant update user");
+  //       }
+  //     },
+  //     error: function(jqXHR) {
+  //       console.log(jqXHR.responseText + ' :: ' + jqXHR.statusText);
+  //     }
+  //   });
+  // });
 
 
 

@@ -46,7 +46,7 @@ var UserSchema = new Schema({
 	provider: String,
 	providerId: String,
 	providerData: {},
-	datalearn: Boolean,
+	acceptedToWorkshop: {type: Boolean, default:false},
     job_data_scientist:{type: Boolean, default:false},
     job_dev:{type: Boolean, default:false},
     job_designer:{type: Boolean, default:false},

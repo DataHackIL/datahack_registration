@@ -103,7 +103,8 @@
                             <th scope="col">accepted?</th>
                             <th scope="col">in team?</th>
                             <th scope="col">team id</th>
-                            <th scope="col">datalearn?</th>
+                            <th scope="col">wants datalearn?</th>
+                            <th scope="col">accepted to datalearn?</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -131,15 +132,21 @@
                                             <% } %>
                                     />
                                 </td>
-                                <td><input data-uid="<%= users[i]._id %>" type="checkbox" name="isMember"
+                                <td><input data-uid="<%= users[i]._id %>" type="checkbox" name="isMember" disabled
                                     <% if (users[i].isMember) { %>
                                            checked
                                             <% } %>
                                     />
                                 </td>
                                 <td><%= users[i].team %></td>
-                                <td><input id="<%= users[i]._id %>" type="checkbox" name="isDatalearn"
+                                <td><input id="<%= users[i]._id %>" type="checkbox" name="isDatalearn" disabled
                                     <% if (users[i].workshop) { %>
+                                           checked
+                                            <% } %>
+                                    />
+                                </td>
+                                <td><input id="<%= users[i]._id %>" type="checkbox" name="acceptedToDatalearn"
+                                    <% if (users[i].acceptedToWorkshop) { %>
                                            checked
                                             <% } %>
                                     />
