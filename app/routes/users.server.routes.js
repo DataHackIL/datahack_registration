@@ -31,7 +31,7 @@ module.exports = function(app) {
 		.put(users.permissionCheck, users.update)
 		.delete(users.permissionCheck, users.delete);
 	app.param('userId', users.userByID);
-	app.route('/late')
+	app.route('/late2')
 		.get(users.isRegistrationOpen, users.renderRegister)
 		.post(users.isRegistrationOpen, upload.single('cv'), users.register);
 	app.route('/printUsers').get(users.permissionCheck, users.renderPrintUsers);
